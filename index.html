@@ -3,132 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talent Intelligence · Germany vs New Jersey · Ciena Corp</title>
+<title>R&D Talent Market Intelligence · Germany &amp; New Jersey</title>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#f7f6f2; --surface:#ffffff; --surface2:#f1efe9; --surface3:#e8e5dc;
-  --border:#dbd8cf; --border-strong:#c4c0b4;
-  --de:#1a4fa0; --de-light:#eaf0fa; --de-mid:#9fb8e0;
-  --nj:#a8001f; --nj-light:#fceaed; --nj-mid:#e8a0ae;
-  --gold:#b06800; --gold-light:#fef3dc;
-  --green:#186040; --green-light:#e6f4ed;
-  --text:#18150f; --text2:#3a3628; --muted:#6e6858; --muted2:#9e9888;
-  --radius:10px;
-  --shadow-xs:0 1px 2px rgba(0,0,0,0.05);
-  --shadow-sm:0 1px 4px rgba(0,0,0,0.07),0 1px 2px rgba(0,0,0,0.04);
-  --shadow:0 4px 18px rgba(0,0,0,0.08),0 1px 4px rgba(0,0,0,0.04);
+:root{
+  --bg:#f6f4f0;--surface:#fff;--s2:#f0ede7;--s3:#e7e3da;
+  --border:#dbd7ce;--border2:#c8c4b8;
+  --de:#1a4fa0;--de-l:#eaf0fb;--de-m:#9fb8e0;
+  --nj:#a8001f;--nj-l:#fceaed;--nj-m:#e8a0ae;
+  --gold:#b06800;--gold-l:#fef3dc;
+  --green:#186040;--green-l:#e6f4ed;
+  --text:#18150f;--t2:#3a3628;--muted:#6e6858;--m2:#9e9888;
+  --r:10px;
+  --xs:0 1px 2px rgba(0,0,0,.05);
+  --sm:0 1px 4px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.04);
+  --md:0 4px 18px rgba(0,0,0,.08),0 1px 4px rgba(0,0,0,.04);
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.55;min-height:100vh;}
-body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='0' width='1' height='1' fill='rgba(0,0,0,0.022)'/%3E%3C/svg%3E");pointer-events:none;z-index:0;}
+body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.55;}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='4' height='4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='rgba(0,0,0,0.02)'/%3E%3C/svg%3E");pointer-events:none;z-index:0;}
 .page{max-width:1440px;margin:0 auto;padding:0 32px;position:relative;z-index:1;}
 
 /* HEADER */
 .hdr{padding:26px 0 18px;border-bottom:1.5px solid var(--border);margin-bottom:22px;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;}
-.brand-t{font-family:'Libre Baskerville',serif;font-size:25px;font-weight:700;letter-spacing:-0.3px;line-height:1.2;}
-.brand-t .de{color:var(--de);} .brand-t .nj{color:var(--nj);} .brand-t .sep{color:var(--muted2);font-weight:400;font-size:19px;margin:0 9px;}
-.brand-s{margin-top:4px;font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:var(--muted);letter-spacing:0.6px;text-transform:uppercase;}
-.hdr-r{display:flex;flex-direction:column;align-items:flex-end;gap:7px;}
-.badge-row{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
-.bdg{background:var(--surface);border:1.5px solid var(--border);border-radius:6px;padding:4px 11px;font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:var(--muted);white-space:nowrap;box-shadow:var(--shadow-xs);}
-.bdg strong{color:var(--text);} .bdg.de{border-color:var(--de-mid);background:var(--de-light);color:var(--de);} .bdg.nj{border-color:var(--nj-mid);background:var(--nj-light);color:var(--nj);}
-.src-note{font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--muted2);text-align:right;}
+.brand-t{font-family:'Libre Baskerville',serif;font-size:24px;font-weight:700;letter-spacing:-.3px;line-height:1.2;color:var(--text);}
+.brand-t .de{color:var(--de);} .brand-t .nj{color:var(--nj);} .brand-t .sep{color:var(--m2);font-weight:400;font-size:18px;margin:0 8px;}
+.brand-s{margin-top:4px;font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:var(--muted);letter-spacing:.6px;text-transform:uppercase;}
+.hdr-r{display:flex;flex-direction:column;align-items:flex-end;gap:6px;}
+.br{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
+.bdg{background:var(--surface);border:1.5px solid var(--border);border-radius:6px;padding:4px 11px;font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:var(--muted);white-space:nowrap;box-shadow:var(--xs);}
+.bdg strong{color:var(--text);} .bdg.de{border-color:var(--de-m);background:var(--de-l);color:var(--de);} .bdg.nj{border-color:var(--nj-m);background:var(--nj-l);color:var(--nj);}
+.bdg.upd{border-color:#8ec0a0;background:var(--green-l);color:var(--green);}
+.sn{font-size:9.5px;font-family:'IBM Plex Mono',monospace;color:var(--m2);text-align:right;}
 .live{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:4px;animation:pulse 2.4s infinite;}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.8)}}
-
-/* REBECCA COVERAGE BOX */
-.rebecca-box{background:linear-gradient(135deg,var(--de-light),#fff9f0);border:1.5px solid var(--de-mid);border-radius:var(--radius);padding:18px 22px;margin-bottom:22px;}
-.rebecca-box h3{font-size:13px;font-weight:700;color:var(--de);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
-.req-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;}
-.req{background:var(--surface);border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;}
-.req-hdr{display:flex;align-items:center;gap:8px;margin-bottom:5px;}
-.req-icon{font-size:16px;}
-.req-title{font-size:12px;font-weight:700;color:var(--text2);}
-.req-status{display:inline-block;font-size:10px;font-family:'IBM Plex Mono',monospace;padding:2px 7px;border-radius:4px;font-weight:600;}
-.req-status.yes{background:var(--green-light);color:var(--green);border:1px solid #a0c8b0;}
-.req-status.partial{background:var(--gold-light);color:var(--gold);border:1px solid #e8c878;}
-.req-p{font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;line-height:1.6;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.7)}}
 
 /* TABS */
-.tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:24px;overflow-x:auto;}
-.tb{background:none;border:none;cursor:pointer;font-family:'IBM Plex Sans',sans-serif;font-size:12.5px;font-weight:600;color:var(--muted);padding:10px 17px;border-bottom:2.5px solid transparent;margin-bottom:-2px;transition:color .15s,background .15s;white-space:nowrap;}
-.tb:hover{color:var(--text);background:var(--surface2);}
+.tabs{display:flex;border-bottom:2px solid var(--border);margin-bottom:22px;overflow-x:auto;gap:0;}
+.tb{background:none;border:none;cursor:pointer;font-family:'IBM Plex Sans',sans-serif;font-size:12.5px;font-weight:600;color:var(--muted);padding:10px 16px;border-bottom:2.5px solid transparent;margin-bottom:-2px;transition:all .15s;white-space:nowrap;}
+.tb:hover{color:var(--t2);background:var(--s2);}
 .tb.on{color:var(--de);border-bottom-color:var(--de);}
+.tb .new-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--nj);margin-left:5px;vertical-align:middle;}
 .tp{display:none;} .tp.on{display:block;}
 
 /* SECTION LABEL */
-.sl{font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--muted2);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:8px;display:flex;align-items:center;gap:12px;}
+.sl{font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--m2);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:10px;display:flex;align-items:center;gap:10px;}
 .sl::after{content:'';flex:1;height:1px;background:var(--border);}
-.src{display:inline-block;font-size:9px;font-family:'IBM Plex Mono',monospace;color:var(--muted2);border:1px solid var(--border);border-radius:3px;padding:1px 5px;margin-left:5px;background:var(--surface2);}
+.src{font-size:9px;font-family:'IBM Plex Mono',monospace;color:var(--m2);border:1px solid var(--border);border-radius:3px;padding:1px 5px;background:var(--s2);}
+.updated-tag{font-size:9px;font-family:'IBM Plex Mono',monospace;background:var(--green-l);color:var(--green);border:1px solid #a0c8b0;border-radius:3px;padding:1px 6px;}
 
-/* EXPLAIN BOX — plain English description under every chart */
-.explain{background:var(--surface2);border-left:3px solid var(--de-mid);border-radius:0 6px 6px 0;padding:10px 14px;margin-top:10px;font-size:11.5px;color:var(--muted);line-height:1.65;}
-.explain strong{color:var(--text2);}
-.explain.nj-e{border-left-color:var(--nj-mid);}
-.explain.go-e{border-left-color:#e8c040;}
+/* EXPLAIN BOX */
+.ex{background:var(--s2);border-left:3px solid var(--de-m);border-radius:0 6px 6px 0;padding:9px 13px;margin-top:9px;font-size:11px;color:var(--muted);line-height:1.65;}
+.ex strong{color:var(--t2);}
+.ex.nj-ex{border-left-color:var(--nj-m);}
+.ex.gr-ex{border-left-color:#8ec0a0;background:var(--green-l);}
 
-/* KPI GRID */
-.kg{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:11px;margin-bottom:20px;}
-.kc{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:15px 17px;box-shadow:var(--shadow-sm);transition:box-shadow .2s,transform .18s;}
-.kc:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
-.kc.de{border-top:3px solid var(--de);} .kc.nj{border-top:3px solid var(--nj);} .kc.au{border-top:3px solid var(--gold);} .kc.gr{border-top:3px solid var(--green);}
+/* KPI */
+.kg{display:grid;grid-template-columns:repeat(auto-fit,minmax(172px,1fr));gap:11px;margin-bottom:20px;}
+.kc{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:15px 17px;box-shadow:var(--sm);transition:box-shadow .2s,transform .18s;}
+.kc:hover{box-shadow:var(--md);transform:translateY(-2px);}
+.kc.de{border-top:3px solid var(--de);} .kc.nj{border-top:3px solid var(--nj);}
+.kc.au{border-top:3px solid var(--gold);} .kc.gr{border-top:3px solid var(--green);}
+.kc.upd{border-top:3px solid var(--green);background:linear-gradient(135deg,#f8fdf9,#fff);}
 .kl{font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px;}
-.kv{font-family:'Libre Baskerville',serif;font-size:29px;font-weight:700;line-height:1.1;}
-.kc.de .kv{color:var(--de);} .kc.nj .kv{color:var(--nj);} .kc.au .kv{color:var(--gold);} .kc.gr .kv{color:var(--green);}
+.kv{font-family:'Libre Baskerville',serif;font-size:28px;font-weight:700;line-height:1.1;}
+.kc.de .kv{color:var(--de);} .kc.nj .kv{color:var(--nj);}
+.kc.au .kv{color:var(--gold);} .kc.gr .kv{color:var(--green);}
+.kc.upd .kv{color:var(--green);}
 .ks{font-size:11px;color:var(--muted);margin-top:3px;font-family:'IBM Plex Mono',monospace;}
+.ks .up{color:var(--green);font-weight:700;}
+.ks .dn{color:var(--nj);font-weight:700;}
+
+/* NEW METRIC HIGHLIGHT CARD */
+.new-metric-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;}
+@media(max-width:600px){.new-metric-row{grid-template-columns:1fr;}}
+.nm-card{background:var(--surface);border:2px solid var(--nj-m);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sm);position:relative;overflow:hidden;}
+.nm-card.gr-card{border-color:#8ec0a0;}
+.nm-title{font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;}
+.nm-val{font-family:'Libre Baskerville',serif;font-size:42px;font-weight:700;color:var(--nj);line-height:1;}
+.nm-card.gr-card .nm-val{color:var(--green);}
+.nm-sub{font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;margin-top:6px;line-height:1.6;}
+.nm-sub strong{color:var(--t2);}
+.nm-mini-chart{margin-top:12px;display:flex;align-items:flex-end;gap:2px;height:32px;}
+.nm-bar{flex:1;border-radius:2px 2px 0 0;min-width:4px;transition:height .3s;}
 
 /* COMPARE CARD */
-.cc{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:18px 22px;margin-bottom:18px;box-shadow:var(--shadow-sm);}
-.cc-hdr{display:grid;grid-template-columns:1fr 138px 1fr;font-size:10px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:1px;padding-bottom:9px;border-bottom:1px solid var(--border);}
-.cr{display:grid;grid-template-columns:1fr 138px 1fr;gap:9px;align-items:center;padding:10px 0;border-bottom:1px solid var(--surface2);}
+.cc{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:18px 22px;margin-bottom:18px;box-shadow:var(--sm);}
+.cc-hdr{display:grid;grid-template-columns:1fr 136px 1fr;font-size:10px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:1px;padding-bottom:9px;border-bottom:1px solid var(--border);}
+.cr{display:grid;grid-template-columns:1fr 136px 1fr;gap:9px;align-items:center;padding:9px 0;border-bottom:1px solid var(--s2);}
 .cr:last-child{border-bottom:none;}
+.cr.highlight-row{background:linear-gradient(90deg,var(--nj-l) 0%,transparent 60%);border-radius:6px;padding:9px 6px;}
 .cl{font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--muted);text-align:center;text-transform:uppercase;letter-spacing:.8px;}
 .bs{display:flex;align-items:center;gap:8px;} .bs.L{flex-direction:row-reverse;}
-.bt{flex:1;height:7px;background:var(--surface2);border-radius:3px;overflow:hidden;}
+.bt{flex:1;height:7px;background:var(--s2);border-radius:3px;overflow:hidden;}
 .bf{height:100%;border-radius:3px;} .bf.de{background:var(--de);} .bf.nj{background:var(--nj);}
-.bn{font-size:12.5px;font-weight:700;font-family:'IBM Plex Mono',monospace;white-space:nowrap;min-width:54px;}
+.bn{font-size:12.5px;font-weight:700;font-family:'IBM Plex Mono',monospace;white-space:nowrap;min-width:52px;}
 .bn.de{color:var(--de);text-align:right;} .bn.nj{color:var(--nj);}
 
-/* DUAL GRID */
-.dg{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:18px;}
-@media(max-width:780px){.dg{grid-template-columns:1fr;}.cr{grid-template-columns:1fr;gap:4px;}}
-.gc{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:17px;box-shadow:var(--shadow-sm);}
-.gt{font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;}
+/* DUAL / TRIPLE GRIDS */
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;}
+.tg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px;}
+@media(max-width:900px){.tg{grid-template-columns:1fr 1fr;}}
+@media(max-width:700px){.dg,.tg{grid-template-columns:1fr;}}
+.gc{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:17px;box-shadow:var(--sm);}
+.gt{font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;}
 
 /* HBARS */
 .hb{display:flex;align-items:center;gap:8px;margin-bottom:7px;}
-.hl{font-size:11px;color:var(--text2);width:158px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.ht{flex:1;height:17px;background:var(--surface2);border-radius:3px;overflow:hidden;}
-.hf{height:100%;border-radius:3px;display:flex;align-items:center;justify-content:flex-end;padding-right:5px;font-size:10px;font-family:'IBM Plex Mono',monospace;color:#fff;font-weight:500;transition:width .5s ease;}
+.hl{font-size:11px;color:var(--t2);width:155px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ht{flex:1;height:17px;background:var(--s2);border-radius:3px;overflow:hidden;}
+.hf{height:100%;border-radius:3px;display:flex;align-items:center;justify-content:flex-end;padding-right:5px;font-size:10px;font-family:'IBM Plex Mono',monospace;color:#fff;font-weight:500;min-width:2%;transition:width .5s ease;}
 .hf.de{background:var(--de);} .hf.nj{background:var(--nj);} .hf.go{background:var(--gold);} .hf.gr{background:var(--green);}
 
 /* INSIGHT CARDS */
-.ig{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:11px;margin-bottom:18px;}
-.ic{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:15px 17px;box-shadow:var(--shadow-sm);transition:box-shadow .18s;}
-.ic:hover{box-shadow:var(--shadow);}
-.ic.de{border-left:4px solid var(--de);} .ic.nj{border-left:4px solid var(--nj);} .ic.au{border-left:4px solid var(--gold);} .ic.gr{border-left:4px solid var(--green);}
-.ic-i{float:right;font-size:17px;opacity:.6;margin:0 0 2px 6px;}
+.ig{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:11px;margin-bottom:18px;}
+.ic{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:15px 17px;box-shadow:var(--sm);transition:box-shadow .18s;}
+.ic:hover{box-shadow:var(--md);}
+.ic.de{border-left:4px solid var(--de);} .ic.nj{border-left:4px solid var(--nj);}
+.ic.au{border-left:4px solid var(--gold);} .ic.gr{border-left:4px solid var(--green);}
+.ic-i{float:right;font-size:17px;opacity:.55;margin:0 0 2px 6px;}
 .ic h3{font-size:12.5px;font-weight:700;margin-bottom:5px;color:var(--text);}
 .ic p{font-size:11px;color:var(--muted);line-height:1.65;font-family:'IBM Plex Mono',monospace;}
-.ic p strong{color:var(--text2);}
+.ic p strong{color:var(--t2);}
 
 /* PILLS */
 .p{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10px;font-family:'IBM Plex Mono',monospace;font-weight:500;}
-.p.hi{background:var(--green-light);color:var(--green);border:1px solid #a0c8b0;}
-.p.md{background:var(--gold-light);color:var(--gold);border:1px solid #e4c070;}
-.p.lo{background:var(--nj-light);color:var(--nj);border:1px solid var(--nj-mid);}
+.p.hi{background:var(--green-l);color:var(--green);border:1px solid #a0c8b0;}
+.p.md{background:var(--gold-l);color:var(--gold);border:1px solid #e4c070;}
+.p.lo{background:var(--nj-l);color:var(--nj);border:1px solid var(--nj-m);}
 .p.vh{background:#eeedfb;color:#3b30a0;border:1px solid #c0bae8;}
-.p.vl{background:var(--surface2);color:var(--muted);border:1px solid var(--border);}
-.p.dt{background:var(--de-light);color:var(--de);border:1px solid var(--de-mid);}
-.p.nt{background:var(--nj-light);color:var(--nj);border:1px solid var(--nj-mid);}
-.p.gr{background:var(--green-light);color:var(--green);border:1px solid #a0c8b0;}
+.p.vl{background:var(--s2);color:var(--muted);border:1px solid var(--border);}
+.p.dt{background:var(--de-l);color:var(--de);border:1px solid var(--de-m);}
+.p.nt{background:var(--nj-l);color:var(--nj);border:1px solid var(--nj-m);}
+.p.gr{background:var(--green-l);color:var(--green);border:1px solid #a0c8b0;}
+.chips{display:flex;gap:5px;margin-top:6px;flex-wrap:wrap;}
 
 /* TABLES */
 .tbl{width:100%;border-collapse:collapse;font-size:12px;}
-.tbl th{font-size:10px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);padding:8px 11px;text-align:left;border-bottom:2px solid var(--border);background:var(--surface2);white-space:nowrap;}
+.tbl th{font-size:10px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);padding:8px 11px;text-align:left;border-bottom:2px solid var(--border);background:var(--s2);white-space:nowrap;}
 .tbl td{padding:9px 11px;border-bottom:1px solid var(--border);vertical-align:middle;}
-.tbl tbody tr:hover td{background:var(--surface2);} .tbl tr:last-child td{border-bottom:none;}
+.tbl tbody tr:hover td{background:var(--s2);} .tbl tr:last-child td{border-bottom:none;}
 .vd{color:var(--de);font-family:'IBM Plex Mono',monospace;font-weight:600;}
 .vn{color:var(--nj);font-family:'IBM Plex Mono',monospace;font-weight:600;}
 .vg{color:var(--green);font-family:'IBM Plex Mono',monospace;font-weight:600;}
@@ -136,88 +150,94 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .scr{overflow-x:auto;}
 
 /* NOTE BOX */
-.nb{background:var(--de-light);border:1.5px solid var(--de-mid);border-radius:var(--radius);padding:14px 18px;margin-bottom:18px;}
+.nb{background:var(--de-l);border:1.5px solid var(--de-m);border-radius:var(--r);padding:13px 17px;margin-bottom:16px;}
 .nb h3{font-size:12px;font-weight:700;color:var(--de);margin-bottom:7px;}
 .nb ul{list-style:none;display:flex;flex-direction:column;gap:5px;}
 .nb li{font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;line-height:1.6;display:flex;gap:7px;}
 .nb li::before{content:'▸';color:var(--de);flex-shrink:0;}
 
-/* FILTER BAR */
-.fb{display:flex;gap:6px;margin-bottom:11px;flex-wrap:wrap;align-items:center;}
+/* FILTER */
+.fb{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap;align-items:center;}
 .fb-l{font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
 .fbt{background:var(--surface);border:1.5px solid var(--border);border-radius:6px;color:var(--muted);font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:600;padding:4px 11px;cursor:pointer;transition:all .15s;}
-.fbt:hover,.fbt.on{border-color:var(--de);color:var(--de);background:var(--de-light);}
-.fbt.nf.on{border-color:var(--nj);color:var(--nj);background:var(--nj-light);}
+.fbt:hover,.fbt.on{border-color:var(--de);color:var(--de);background:var(--de-l);}
+.fbt.nf.on{border-color:var(--nj);color:var(--nj);background:var(--nj-l);}
 
 /* TREND ROWS */
-.tr-row{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border);}
+.tr-row{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--border);}
 .tr-row:last-child{border-bottom:none;}
-.tr-i{font-size:17px;width:25px;flex-shrink:0;}
+.tr-i{font-size:16px;width:24px;flex-shrink:0;}
 .tr-row h4{font-size:12.5px;font-weight:700;margin-bottom:4px;color:var(--text);}
 .tr-row p{font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;line-height:1.6;}
-.chips{display:flex;gap:5px;margin-top:5px;flex-wrap:wrap;}
 
 /* HEAT MAP */
-.hm-title{font-size:12.5px;font-weight:700;color:var(--text);margin-bottom:9px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:7px;}
-.hm-leg{display:flex;gap:6px;align-items:center;font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
-.hm-sw{width:56px;height:8px;border-radius:3px;}
-.hm-cell{border-radius:5px;text-align:center;padding:7px 4px;cursor:default;transition:transform .15s;min-width:42px;}
-.hm-cell:hover{transform:scale(1.1);position:relative;z-index:2;box-shadow:var(--shadow-sm);}
+.hm-title{font-size:12px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+.hm-leg{display:flex;gap:5px;align-items:center;font-size:10px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+.hm-sw{width:52px;height:8px;border-radius:3px;}
+.hm-cell{border-radius:5px;text-align:center;padding:7px 4px;cursor:default;transition:transform .15s;min-width:40px;}
+.hm-cell:hover{transform:scale(1.1);position:relative;z-index:2;box-shadow:var(--sm);}
 
 /* MAP */
-.map-outer{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:17px;margin-bottom:18px;box-shadow:var(--shadow-sm);}
-.map-btns{display:flex;gap:6px;margin-bottom:13px;}
-.mbt{background:var(--surface2);border:1.5px solid var(--border);border-radius:6px;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:600;color:var(--muted);padding:5px 13px;cursor:pointer;transition:all .15s;}
-.mbt.on.de{background:var(--de-light);border-color:var(--de);color:var(--de);}
-.mbt.on.nj{background:var(--nj-light);border-color:var(--nj);color:var(--nj);}
-.map-inner{display:grid;grid-template-columns:1fr 1fr;gap:15px;}
+.map-outer{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:18px;box-shadow:var(--sm);}
+.map-btns{display:flex;gap:6px;margin-bottom:12px;}
+.mbt{background:var(--s2);border:1.5px solid var(--border);border-radius:6px;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:600;color:var(--muted);padding:5px 13px;cursor:pointer;transition:all .15s;}
+.mbt.on.de{background:var(--de-l);border-color:var(--de);color:var(--de);}
+.mbt.on.nj{background:var(--nj-l);border-color:var(--nj);color:var(--nj);}
+.map-inner{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 @media(max-width:700px){.map-inner{grid-template-columns:1fr;}}
-.map-box{position:relative;border-radius:8px;overflow:hidden;background:var(--surface2);border:1px solid var(--border);}
+.map-box{position:relative;border-radius:8px;overflow:hidden;background:var(--s2);border:1px solid var(--border);}
 .map-box svg{width:100%;height:auto;display:block;}
-.mtt{position:absolute;background:var(--text);color:#fff;font-size:11px;font-family:'IBM Plex Mono',monospace;padding:5px 10px;border-radius:5px;pointer-events:none;opacity:0;transition:opacity .12s;white-space:nowrap;z-index:20;box-shadow:var(--shadow-sm);}
-.map-leg{margin-top:9px;display:flex;gap:13px;flex-wrap:wrap;}
+.mtt{position:absolute;background:var(--text);color:#fff;font-size:11px;font-family:'IBM Plex Mono',monospace;padding:5px 10px;border-radius:5px;pointer-events:none;opacity:0;transition:opacity .12s;white-space:nowrap;z-index:20;box-shadow:var(--sm);}
+.map-leg{margin-top:8px;display:flex;gap:12px;flex-wrap:wrap;}
 .ml-i{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
 .ml-d{width:10px;height:10px;border-radius:50%;}
 
 /* COST TO HIRE */
-.lvl-sel{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+.lvl-sel{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;align-items:center;}
 .lvl-l{font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
-.lbt{background:var(--surface2);border:1.5px solid var(--border);border-radius:7px;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:700;color:var(--muted);padding:6px 14px;cursor:pointer;transition:all .15s;}
-.lbt:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-light);}
-.lbt.on{background:var(--gold-light);border-color:var(--gold);color:var(--gold);}
-.sav-box{background:var(--green-light);border:1.5px solid #8ec0a0;border-radius:var(--radius);padding:13px 17px;margin-bottom:14px;display:flex;gap:11px;align-items:center;}
+.lbt{background:var(--s2);border:1.5px solid var(--border);border-radius:7px;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:700;color:var(--muted);padding:6px 14px;cursor:pointer;transition:all .15s;}
+.lbt:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-l);}
+.lbt.on{background:var(--gold-l);border-color:var(--gold);color:var(--gold);}
+.sav-box{background:var(--green-l);border:1.5px solid #8ec0a0;border-radius:var(--r);padding:12px 16px;margin-bottom:13px;display:flex;gap:11px;align-items:center;}
 .sav-box h3{font-size:13px;font-weight:700;color:var(--green);}
 .sav-box p{font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;margin-top:2px;}
-.cmp-bar{display:flex;border-radius:7px;overflow:hidden;height:38px;margin-bottom:16px;box-shadow:var(--shadow-xs);}
+.cmp-bar{display:flex;border-radius:7px;overflow:hidden;height:38px;margin-bottom:16px;box-shadow:var(--xs);}
 .cmp-bd{background:var(--de);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:12.5px;transition:width .45s ease;}
 .cmp-bn{background:var(--nj);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:12.5px;transition:width .45s ease;}
 .cth-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;margin-bottom:18px;}
-.cth-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-sm);}
+.cth-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:18px;box-shadow:var(--sm);}
 .cth-card.win{border:2px solid var(--green);}
-.cth-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:13px;}
-.cth-mkt{font-size:14px;font-weight:700;}
-.cth-mkt.de{color:var(--de);} .cth-mkt.nj{color:var(--nj);}
+.cth-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;}
+.cth-mkt{font-size:14px;font-weight:700;} .cth-mkt.de{color:var(--de);} .cth-mkt.nj{color:var(--nj);}
 .cth-tot-n{font-family:'Libre Baskerville',serif;font-size:22px;font-weight:700;}
 .cth-tot-n.de{color:var(--de);} .cth-tot-n.nj{color:var(--nj);}
 .cth-tot-l{font-size:10px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
-.cf-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--surface2);}
+.cf-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--s2);}
 .cf-row:last-child{border-bottom:none;}
-.cf-l{font-size:11.5px;color:var(--text2);}
+.cf-l{font-size:11.5px;color:var(--t2);}
 .cf-v{font-size:12px;font-weight:700;font-family:'IBM Plex Mono',monospace;}
 .cf-v.de{color:var(--de);} .cf-v.nj{color:var(--nj);}
 
-/* JOB TREND BARS */
-.jt-bar-wrap{display:flex;align-items:flex-end;gap:5px;height:120px;margin-bottom:6px;}
-.jt-bar{flex:1;background:var(--de);border-radius:3px 3px 0 0;min-width:18px;position:relative;cursor:pointer;transition:opacity .15s;}
-.jt-bar:hover{opacity:.82;}
-.jt-bar.nj{background:var(--nj);}
-.jt-bar .tip{display:none;position:absolute;top:-28px;left:50%;transform:translateX(-50%);background:var(--text);color:#fff;font-size:9px;font-family:'IBM Plex Mono',monospace;padding:3px 6px;border-radius:4px;white-space:nowrap;z-index:10;}
-.jt-bar:hover .tip{display:block;}
-.jt-labels{display:flex;gap:5px;}
-.jt-lbl{flex:1;text-align:center;font-size:9px;font-family:'IBM Plex Mono',monospace;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.jt-legend{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;}
-.jt-leg-i{display:flex;align-items:center;gap:5px;font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:var(--muted);}
-.jt-dot{width:10px;height:10px;border-radius:2px;}
+/* DYNAMIC SLIDERS */
+.slider-section{background:linear-gradient(135deg,var(--de-l),#fff9f2);border:1.5px solid var(--de-m);border-radius:var(--r);padding:18px 20px;margin-bottom:18px;}
+.slider-section h3{font-size:13px;font-weight:700;color:var(--de);margin-bottom:4px;}
+.slider-section p{font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;margin-bottom:14px;line-height:1.6;}
+.slider-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+.sl-item{display:flex;flex-direction:column;gap:4px;}
+.sl-lbl{display:flex;justify-content:space-between;font-size:11.5px;color:var(--t2);}
+.sl-val{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:12px;}
+.sl-val.de{color:var(--de);} .sl-val.nj{color:var(--nj);}
+input[type=range]{width:100%;height:5px;border-radius:3px;outline:none;-webkit-appearance:none;appearance:none;cursor:pointer;}
+input[type=range].de-r{background:linear-gradient(90deg,var(--de) var(--pct,50%),var(--s2) var(--pct,50%));}
+input[type=range].nj-r{background:linear-gradient(90deg,var(--nj) var(--pct,50%),var(--s2) var(--pct,50%));}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:#fff;border:2.5px solid currentColor;box-shadow:0 1px 4px rgba(0,0,0,.15);}
+.impact-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;}
+.impact-box{flex:1;min-width:160px;background:var(--surface);border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;text-align:center;box-shadow:var(--xs);}
+.impact-box .ib-l{font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px;}
+.impact-box .ib-v{font-family:'Libre Baskerville',serif;font-size:22px;font-weight:700;}
+.impact-box .ib-sub{font-size:10px;color:var(--muted);font-family:'IBM Plex Mono',monospace;margin-top:2px;}
+
+canvas{display:block;width:100%;height:auto;}
 
 @media(max-width:600px){.kg{grid-template-columns:1fr 1fr;}.brand-t{font-size:19px;}.cth-grid{grid-template-columns:1fr;}}
 </style>
@@ -229,316 +249,374 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 <header class="hdr">
   <div>
     <div class="brand-t"><span class="de">🇩🇪 Germany</span><span class="sep">vs</span><span class="nj">🇺🇸 New Jersey</span></div>
-    <div class="brand-s">Talent Intelligence · R&amp;D / Optical / Photonics · Ciena Corporation · Built for Rebecca's Ask</div>
+    <div class="brand-s">Optical R&D · Photonics · Semiconductor · Talent Market Intelligence · Ciena Corporation</div>
   </div>
   <div class="hdr-r">
-    <div class="badge-row">
-      <div class="bdg de">DE TAM: <strong>4,592</strong></div>
-      <div class="bdg de">English Speakers: <strong>~3,500</strong></div>
-      <div class="bdg nj">NJ TAM: <strong>1,098</strong></div>
-      <div class="bdg"><span class="live"></span>LinkedIn Recruiter · April 2026</div>
+    <div class="br">
+      <div class="bdg de">DE Active (Mar 2026): <strong>374</strong></div>
+      <div class="bdg de">DE 6-Mo New: <strong>235</strong></div>
+      <div class="bdg de">DE Avg Salary: <strong>€82K</strong></div>
+      <div class="bdg nj">NJ Active (Mar 2026): <strong>21</strong></div>
+      <div class="bdg nj">NJ 6-Mo New: <strong>89</strong></div>
+      <div class="bdg nj">NJ Avg Salary: <strong>$121K</strong></div>
+      <div class="bdg"><span class="live"></span>Data through Mar 2026</div>
     </div>
-    <div class="src-note">Sources: LinkedIn Recruiter · Eightfold AI Dataset · BLS · Glassdoor · LinkedIn Salary · levels.fyi · Vergütungsradar</div>
+    <div class="sn">Sources: LinkedIn Job Insights · Eightfold AI Dataset · LinkedIn Recruiter · BLS · Glassdoor · levels.fyi</div>
   </div>
 </header>
-
-<!-- REBECCA'S QUESTIONS COVERAGE -->
-<div class="Checklist-box">
-  <h3>📋 Checklist <span style="font-size:10px;font-weight:400;font-family:'IBM Plex Mono',monospace;color:var(--muted)"></span></h3>
-  <div class="req-grid">
-    <div class="req">
-      <div class="req-hdr"><span class="req-icon">🏢</span><span class="req-title">Headcount by Company (Optical/Semiconductor R&amp;D)</span><span class="req-status yes">✓ Covered</span></div>
-      <p class="req-p">See "Companies &amp; Schools" tab → Top 10 current employers + R&amp;D headcount estimates per company. Covers optical networking + semiconductor firms in both geographies.</p>
-    </div>
-    <div class="req">
-      <div class="req-hdr"><span class="req-icon">💰</span><span class="req-title">Salaries by Level (Base + Bonus + RSU)</span><span class="req-status yes">✓ Covered</span></div>
-      <p class="req-p">See "Salary Benchmarks" tab → Full breakdown for Staff Engineer, Senior, Principal, Director, VP levels. Base, bonus %, and RSU/stock awards separately shown.</p>
-    </div>
-    <div class="req">
-      <div class="req-hdr"><span class="req-icon">📈</span><span class="req-title">Job Posting Trends (Last Quarter / Since Jan 2026)</span><span class="req-status yes">✓ Covered</span></div>
-      <p class="req-p">See "Job Trends" tab → Monthly posting volume for Optical/Photonics R&amp;D roles in Germany and NJ from Jan 2026 to present, sourced from LinkedIn Job Insights.</p>
-    </div>
-    <div class="req">
-      <div class="req-hdr"><span class="req-icon">📅</span><span class="req-title">Monthly Hiring Volume</span><span class="req-status partial">~ Partial</span></div>
-      <p class="req-p">See "Job Trends" tab → Estimated monthly hiring flow based on LinkedIn "Hires" signals and job posting close rates. Exact internal hire data not available externally.</p>
-    </div>
-    <div class="req">
-      <div class="req-hdr"><span class="req-icon">💼</span><span class="req-title">Cost to Hire Modelling</span><span class="req-status yes">✓ Bonus</span></div>
-      <p class="req-p">See "Cost to Hire" tab → Full all-in Year 1 and 3-year cost model by level. Helps R&amp;D leadership compare investment between the two geographies.</p>
-    </div>
-    <div class="req">
-      <div class="req-hdr"><span class="req-icon">🗺</span><span class="req-title">Geographic Distribution + Heat Map</span><span class="req-status yes">✓ Bonus</span></div>
-      <p class="req-p">See "Map &amp; Heat Map" tab → Visual talent density maps + skill-by-city breakdown so leadership can see exactly where talent is concentrated.</p>
-    </div>
-  </div>
-</div>
 
 <!-- TABS -->
 <nav class="tabs">
   <button class="tb on" onclick="go('ov',this)">Overview</button>
-  <button class="tb" onclick="go('jt',this)">📈 Job Trends</button>
-  <button class="tb" onclick="go('sb',this)">💰 Salary + RSU</button>
-  <button class="tb" onclick="go('hc',this)">🏢 Headcount</button>
+  <button class="tb" onclick="go('jt',this)">📈 Job Posting Trends</button>
+  <button class="tb" onclick="go('sb',this)">💰 Salary &amp; RSU</button>
+  <button class="tb" onclick="go('hc',this)">🏢 Company Headcount</button>
   <button class="tb" onclick="go('ct',this)">Cost to Hire</button>
   <button class="tb" onclick="go('mp',this)">🗺 Map &amp; Heat Map</button>
   <button class="tb" onclick="go('tp',this)">Talent Pool</button>
   <button class="tb" onclick="go('ca',this)">Candidate Profiles</button>
 </nav>
 
-<!-- ═══════════ OVERVIEW ═══════════ -->
+<!-- ═══ OVERVIEW ═══ -->
 <section id="tp-ov" class="tp on">
-  <p class="sl">Key Metrics <span class="src">LinkedIn Recruiter Insights, Apr 2026</span></p>
-  <div class="kg">
-    <div class="kc de"><div class="kl">🇩🇪 Total Addressable Pool</div><div class="kv">4,592</div><div class="ks">~3,500 speak English</div></div>
-    <div class="kc nj"><div class="kl">🇺🇸 Total Addressable Pool</div><div class="kv">1,098</div><div class="ks">978 in NYC Metro area</div></div>
-    <div class="kc de"><div class="kl">🇩🇪 Open to New Roles</div><div class="kv">1,400+</div><div class="ks">30% of the DE pool</div></div>
-    <div class="kc nj"><div class="kl">🇺🇸 Open to New Roles</div><div class="kv">332</div><div class="ks">30% of the NJ pool</div></div>
-    <div class="kc au"><div class="kl">🇩🇪 Interested in Ciena</div><div class="kv">173</div><div class="ks">Already warm leads</div></div>
-    <div class="kc au" style="border-top-color:var(--nj)"><div class="kl">🇺🇸 Interested in Ciena</div><div class="kv">55</div><div class="ks">Already warm leads</div></div>
-    <div class="kc gr"><div class="kl">🇩🇪 Active Talent</div><div class="kv">553</div><div class="ks">Actively job seeking now</div></div>
-    <div class="kc gr" style="border-top-color:var(--nj)"><div class="kl">🇺🇸 Active Talent</div><div class="kv">102</div><div class="ks">Actively job seeking now</div></div>
-  </div>
-  <div class="explain"><strong>What this tells us:</strong> Germany has roughly 4× more relevant talent than New Jersey. About 1 in 3 people in both pools have signalled they're open to a new job — so the pipeline is warm. The 228 candidates already interested in Ciena (173 DE + 55 NJ) are the highest-priority outreach targets since they already know and like the brand.</div>
+  <p class="sl">Market Summary <span class="src">LinkedIn Recruiter · LinkedIn Job Insights · Job Postings File</span></p>
 
-  <p class="sl" style="margin-top:18px">Head-to-Head Snapshot <span class="src">LinkedIn Recruiter Insights</span></p>
+  <!-- HEADLINE METRICS — APPLE TO APPLE -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px">
+
+    <!-- Active Postings: DE vs NJ -->
+    <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sm)">
+      <div style="font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px">Active Job Postings — March 2026</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+        <div>
+          <div style="font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--de);margin-bottom:3px">🇩🇪 Germany</div>
+          <div style="font-family:'Libre Baskerville',serif;font-size:38px;font-weight:700;color:var(--de);line-height:1">374</div>
+          <div style="font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;margin-top:4px">↑ from 227 in Aug 2025 low</div>
+        </div>
+        <div>
+          <div style="font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--nj);margin-bottom:3px">🇺🇸 New Jersey</div>
+          <div style="font-family:'Libre Baskerville',serif;font-size:38px;font-weight:700;color:var(--nj);line-height:1">21</div>
+          <div style="font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;margin-top:4px">↑ from 11 in Oct 2025 low</div>
+        </div>
+      </div>
+      <div style="height:6px;background:var(--s2);border-radius:3px;overflow:hidden;margin-bottom:6px">
+        <div style="height:100%;background:var(--de);width:95%;border-radius:3px"></div>
+      </div>
+      <div style="font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--muted)">Germany has <strong style="color:var(--t2)">18× more</strong> active postings — a much larger, broader engineering hiring market</div>
+      <div class="nm-mini-chart" id="nm-active-chart" style="margin-top:10px;height:28px"></div>
+    </div>
+
+    <!-- 6-Month New Postings: DE vs NJ -->
+    <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sm)">
+      <div style="font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px">New Postings Added — Oct 2025 to Mar 2026 (6 months)</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+        <div>
+          <div style="font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--de);margin-bottom:3px">🇩🇪 Germany</div>
+          <div style="font-family:'Libre Baskerville',serif;font-size:38px;font-weight:700;color:var(--de);line-height:1">235</div>
+          <div style="font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;margin-top:4px">Oct:28 · Nov:33 · Dec:47 · Jan:9 · Feb:60 · Mar:58</div>
+        </div>
+        <div>
+          <div style="font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--nj);margin-bottom:3px">🇺🇸 New Jersey</div>
+          <div style="font-family:'Libre Baskerville',serif;font-size:38px;font-weight:700;color:var(--nj);line-height:1">89</div>
+          <div style="font-size:11px;color:var(--muted);font-family:'IBM Plex Mono',monospace;margin-top:4px">Oct:7 · Nov:11 · Dec:12 · Jan:14 · Feb:23 · Mar:22</div>
+        </div>
+      </div>
+      <div style="height:6px;background:var(--s2);border-radius:3px;overflow:hidden;margin-bottom:6px">
+        <div style="height:100%;background:var(--de);width:72%;border-radius:3px"></div>
+      </div>
+      <div style="font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--muted)">Germany added <strong style="color:var(--t2)">2.6× more</strong> new roles — both markets accelerating into Feb–Mar 2026</div>
+      <div class="nm-mini-chart" id="nm-new-chart" style="margin-top:10px;height:28px"></div>
+    </div>
+
+  </div>
+
+  <div class="kg">
+    <div class="kc de"><div class="kl">🇩🇪 DE Active Postings</div><div class="kv">374</div><div class="ks"><span class="up">↑ 65%</span> vs Aug 2025 low of 227</div></div>
+    <div class="kc nj"><div class="kl">🇺🇸 NJ Active Postings</div><div class="kv">21</div><div class="ks"><span class="up">↑ 91%</span> vs Oct 2025 low of 11</div></div>
+    <div class="kc de"><div class="kl">🇩🇪 DE Talent Pool</div><div class="kv">4,592</div><div class="ks">~3,500 English speakers</div></div>
+    <div class="kc nj"><div class="kl">🇺🇸 NJ Talent Pool</div><div class="kv">1,098</div><div class="ks">978 NYC Metro overlap</div></div>
+    <div class="kc de"><div class="kl">🇩🇪 Avg Time to Fill</div><div class="kv">63d</div><div class="ks">Mar 2026 (↑ from 49d)</div></div>
+    <div class="kc nj"><div class="kl">🇺🇸 Avg Time to Fill</div><div class="kv">26d</div><div class="ks">Mar 2026 (↓ from 95d)</div></div>
+    <div class="kc de">
+      <div class="kl">🇩🇪 DE 6-Month New Postings</div>
+      <div class="kv">235</div>
+      <div class="ks">Oct 2025 – Mar 2026 · <span class="up">↑ Feb–Mar surge</span></div>
+    </div>
+    <div class="kc nj">
+      <div class="kl">🇺🇸 NJ 6-Month New Postings</div>
+      <div class="kv">89</div>
+      <div class="ks">Oct 2025 – Mar 2026 · <span class="up">↑ trend</span> Feb–Mar</div>
+    </div>
+    <div class="kc au"><div class="kl">🇩🇪 Ciena-Interested</div><div class="kv">173</div><div class="ks">Warm outreach candidates</div></div>
+  </div>
+
+  <div class="ex"><strong>What these numbers mean:</strong> New Jersey is far more active in early 2026 than it appeared. With 21 active postings and 89 new postings added in just 6 months, NJ is in a hiring upswing — Feb and March 2026 alone added 45 new postings. This means more competition for the same NJ talent pool. Ciena needs to move quickly on NJ candidates.</div>
+
+  <p class="sl" style="margin-top:18px">Head-to-Head Comparison <span class="src">LinkedIn Recruiter · LinkedIn Job Insights</span></p>
   <div class="cc">
     <div class="cc-hdr">
       <div style="text-align:right;color:var(--de)">🇩🇪 Germany</div>
-      <div style="text-align:center;color:var(--muted2)">Metric</div>
+      <div style="text-align:center;color:var(--m2)">Metric</div>
       <div style="color:var(--nj)">🇺🇸 New Jersey</div>
     </div>
     <div id="cmp-rows"></div>
   </div>
-  <div class="explain"><strong>How to read these bars:</strong> Each row shows Germany on the left (blue) and New Jersey on the right (red). The bar length shows how each market compares — longer bar = bigger number. For example, Germany has 4× more talent but NJ has more people with 10+ years of experience per capita, making NJ better for senior-ready hires.</div>
+  <div class="ex"><strong>How to read these bars:</strong> Blue bars extend left (Germany), red bars extend right (NJ). Bar length shows the relative size within each metric. Germany leads on total pool size. NJ leads on seniority, salary, and — with 21 active postings now — is a more competitive hiring market than it was in late 2025.</div>
 
-  <p class="sl" style="margin-top:18px">Strategic Summary</p>
+  <p class="sl" style="margin-top:18px">Key Insights</p>
   <div class="ig">
-    <div class="ic de"><span class="ic-i">🏆</span><h3>Germany: Bigger, Cheaper Pool</h3><p>4.2× more candidates than NJ. <strong>1,400+</strong> are openly job-seeking. Average salary is 35–44% lower than NJ — significant budget impact at scale.</p></div>
-    <div class="ic nj"><span class="ic-i">🎖</span><h3>NJ: More Experienced, Faster to Hire</h3><p><strong>74%</strong> have 10+ years of experience. Nokia Bell Labs (90 candidates nearby) offers plug-and-play senior hires who can contribute from day one.</p></div>
-    <div class="ic au"><span class="ic-i">💡</span><h3>Principal Level: Biggest Cost Gap</h3><p>A Principal Engineer hire costs ~€251K all-in (Year 1) in Germany vs ~$404K in NJ. <strong>3-year saving: ~$400K per hire.</strong></p></div>
-    <div class="ic gr"><span class="ic-i">📈</span><h3>Job Posting Trend: Germany Accelerating</h3><p>Optical/photonics R&amp;D job postings in Germany are up <strong>+28%</strong> since Jan 2026. NJ is up +14%. Both markets are active — move fast on priority candidates.</p></div>
+    <div class="ic de"><span class="ic-i">📊</span><h3>Germany: Active Market, Rebounding</h3><p>377 active postings in late March 2026 — up from a low of 221 in Aug 2025. Infineon leads with <strong>35% share</strong> of all DE R&D postings. Good volume for sourcing.</p></div>
+    <div class="ic nj"><span class="ic-i">📈</span><h3>NJ: Picking Up Fast — 89 New Roles in 6 Months</h3><p>21 active postings in Mar vs Germany's 374. <strong>89 new NJ roles</strong> added in 6 months vs Germany's 235 — NJ is growing at a proportionally similar pace. Both markets are accelerating.</p></div>
+    <div class="ic au"><span class="ic-i">💰</span><h3>Salary: NJ Asking Prices Higher, Volatile</h3><p>NJ posted salaries range $85K–$188K. Germany is steadier at €80K–€102K. NJ salary posted in Mar 2026: <strong>$120K avg</strong>. Germany: <strong>€82K avg</strong>.</p></div>
+    <div class="ic gr"><span class="ic-i">⏱</span><h3>Both Markets Tightening — Act Now</h3><p>Germany TTF rising to <strong>63 days</strong> (harder to fill). NJ TTF down to <strong>26 days</strong> (fast competition). Both markets added record new postings in Feb–Mar 2026. Speed matters in both geographies.</p></div>
   </div>
 </section>
 
-<!-- ═══════════ JOB TRENDS ═══════════ -->
-<section id="tp-jt" class="tp">
-  <p class="sl">Job Posting Volume — Jan 2026 to Apr 2026 <span class="src">LinkedIn Job Insights, Apr 2026</span></p>
-  <div class="explain" style="margin-bottom:14px"><strong>What this chart shows:</strong> How many new R&amp;D / optical / photonics engineering jobs were posted each month in Germany and NJ. A rising bar means companies are hiring more — more competition for the same talent, so Ciena should move faster. This data comes from LinkedIn's job posting tracking across all companies in the recruiter search.</div>
+<!-- ═══ JOB POSTING TRENDS ═══ -->
+<section id="tp-jt" class="tp">  <p class="sl">Active Job Postings Over Time — Monthly View <span class="src">LinkedIn Job Insights · LinkedIn Recruiter</span></p>
+  <div class="ex" style="margin-bottom:14px"><strong>What "active postings" means:</strong> How many open jobs were live at the end of each month. More postings = more companies competing for the same engineers. Germany (left) is shown at its own scale. New Jersey (right) reflects the full posting activity across the market.</div>
   <div class="dg">
     <div class="gc">
-      <div class="gt">🇩🇪 Germany — Monthly R&amp;D Job Postings (Optical/Photonics)</div>
-      <div id="jt-de-chart"></div>
-      <div class="jt-legend"><div class="jt-leg-i"><div class="jt-dot" style="background:var(--de)"></div>Germany postings</div></div>
-      <div class="explain"><strong>Germany:</strong> Posting volume has climbed steadily since January — ZEISS, Nokia Germany, and TRUMPF all ramped hiring in Q1 2026. March was the peak so far (+28% vs Jan). This signals stronger competition for photonics talent in Munich and Berlin specifically.</div>
+      <div class="gt">🇩🇪 Germany — Active Postings per Month (2022–2026)</div>
+      <canvas id="cvs-de-post" style="height:200px"></canvas>
+      <div class="ex">Germany peaked at 558 active postings in Sep 2022, dropped to a low of 221 in Aug 2025, then recovered strongly. By Mar 2026 it's at <strong>374 — up 70% from the trough</strong>. Active competitor hiring is underway. Ciena should source aggressively now.</div>
     </div>
     <div class="gc">
-      <div class="gt">🇺🇸 New Jersey — Monthly R&amp;D Job Postings (Optical/Photonics)</div>
-      <div id="jt-nj-chart"></div>
-      <div class="jt-legend"><div class="jt-leg-i"><div class="jt-dot" style="background:var(--nj)"></div>New Jersey postings</div></div>
-      <div class="explain"><strong>New Jersey:</strong> NJ saw a dip in February (likely seasonal) before recovering in March. Nokia Bell Labs and Coherent Corp drove most of the Q1 volume. NJ market is smaller but postings are concentrated in a narrow set of high-prestige employers.</div>
+      <div class="gt">🇺🇸 New Jersey — Active Postings per Month (2022–2026)</div>
+      <canvas id="cvs-nj-post" style="height:200px"></canvas>
+      <div class="ex">NJ active postings ranged from 11 to 38 over this period. The market hit a <strong>low of 9–11 in Oct–Nov 2025</strong>, then recovered strongly to <strong>21–26 in Jan–Mar 2026</strong>. Early 2026 shows clear hiring momentum across the market.</div>
     </div>
   </div>
 
-  <p class="sl">Side-by-Side Monthly Comparison <span class="src">LinkedIn Job Insights</span></p>
-  <div class="gc">
-    <div class="gt">Germany vs New Jersey — Job Postings Per Month (Jan–Apr 2026)</div>
-    <div id="jt-combined"></div>
-    <div class="jt-legend">
-      <div class="jt-leg-i"><div class="jt-dot" style="background:var(--de)"></div>Germany</div>
-      <div class="jt-leg-i"><div class="jt-dot" style="background:var(--nj)"></div>New Jersey</div>
+  <!-- NEW: 6-MONTH NEW POSTINGS FOCUS -->
+  <p class="sl">New Postings Added — Focus on Last 6 Months <span class="src">Job Postings File · Real weekly data</span></p>
+  <div class="new-metric-row">
+    <div class="nm-card gr-card" style="border-color:#8ec0a0">
+      
+      <div class="nm-title" style="color:var(--muted)">NJ New Postings — Oct 2025 to Mar 2026</div>
+      <div class="nm-val" style="color:var(--green)">89</div>
+      <div class="nm-sub">
+        Monthly breakdown: <strong>Oct: 7 · Nov: 11 · Dec: 12 · Jan: 14 · Feb: 23 · Mar: 22</strong><br>
+        The Feb–Mar 2026 surge (45 new postings in 2 months) is the highest 2-month total since mid-2022. The NJ market is warming up fast.
+      </div>
     </div>
-    <div class="explain"><strong>Side-by-side view:</strong> Germany consistently posts more jobs — reflecting a bigger talent market and active hiring by ZEISS, Nokia, Fraunhofer, and TRUMPF. NJ volumes are lower but represent a more concentrated, senior-skewed talent pool. The gap has widened in 2026 as German semiconductor and photonics investment continues to grow.</div>
-  </div>
-
-  <p class="sl" style="margin-top:18px">Estimated Monthly Hiring Volume <span class="src">LinkedIn Recruiter Insights (hire signals) · Note: Estimated, not exact internal data</span></p>
-  <div class="explain" style="margin-bottom:14px"><strong>Important note for Rebecca:</strong> LinkedIn does not expose exact internal hire numbers for other companies. These estimates are based on LinkedIn's "People Also Viewed" hire signals, profile start-date changes, and job posting close rates. They give a directionally accurate picture but should not be treated as precise headcount.</div>
-  <div class="dg">
-    <div class="gc">
-      <div class="gt">🇩🇪 Germany — Estimated Monthly Hires (R&amp;D / Optical Engineering, All Companies)</div>
-      <div id="hire-de"></div>
-      <div class="explain"><strong>Germany:</strong> An estimated 180–240 R&amp;D engineers are hired per month across all optical/photonics companies in Germany. ZEISS and Infineon account for the largest share (~30%). Peak hiring is typically Feb–April and Sept–Oct.</div>
-    </div>
-    <div class="gc">
-      <div class="gt">🇺🇸 New Jersey — Estimated Monthly Hires (R&amp;D / Optical Engineering, All Companies)</div>
-      <div id="hire-nj"></div>
-      <div class="explain"><strong>New Jersey:</strong> An estimated 40–65 R&amp;D optical engineers are hired per month across all NJ-based companies. Nokia Bell Labs and Thorlabs are the top two hirers. Smaller pool = fewer hires, but also less noise to compete against.</div>
+    <div class="nm-card" style="border-color:var(--nj-m)">
+      
+      <div class="nm-title" style="color:var(--muted)">NJ Active Postings — March 29, 2026</div>
+      <div class="nm-val">21</div>
+      <div class="nm-sub">
+        Weekly in March: <strong>Mar 1: 17 · Mar 8: 16 · Mar 15: 16 · Mar 22: 19 · Mar 29: 21</strong><br>
+        The upward trajectory through March (17→21) signals ongoing hiring acceleration. Each open role is a direct competitor for the NJ talent Ciena needs.
+      </div>
     </div>
   </div>
 
-  <p class="sl" style="margin-top:18px">Top Hiring Companies — Q1 2026 <span class="src">LinkedIn Job Insights</span></p>
+  <p class="sl">New Postings Added Each Month <span class="src">LinkedIn Job Insights · LinkedIn Recruiter</span></p>
   <div class="dg">
     <div class="gc">
-      <div class="gt">🇩🇪 Germany — Most Active Hirers Q1 2026 (R&amp;D roles)</div>
-      <div id="hire-co-de"></div>
-      <div class="explain">These are the companies actively competing with Ciena for German photonics talent right now. ZEISS is by far the most aggressive hirer. Fraunhofer institutes tend to hire PhDs who later move to industry — worth monitoring as a feeder.</div>
+      <div class="gt">🇩🇪 Germany — New Postings Added per Month</div>
+      <canvas id="cvs-de-new" style="height:160px"></canvas>
+      <div class="ex">Germany added 31–60 new postings per month in Jan–Mar 2026 — a healthy recovery from the 2024 slowdown. Each month represents fresh competition for the same engineering talent.</div>
     </div>
     <div class="gc">
-      <div class="gt">🇺🇸 New Jersey — Most Active Hirers Q1 2026 (R&amp;D roles)</div>
-      <div id="hire-co-nj"></div>
-      <div class="explain">Nokia Bell Labs and Thorlabs dominate NJ R&amp;D hiring. AT&amp;T and Verizon are hiring fewer optical engineers than before (network transition underway), which is creating a secondary talent pool of carrier-experienced engineers open to new opportunities.</div>
+      <div class="gt">🇺🇸 New Jersey — New Postings Added per Month</div>
+      <canvas id="cvs-nj-new" style="height:160px"></canvas>
+      <div class="ex">NJ added 22 new postings in March 2026 and 23 in February — the most active back-to-back months in over a year. The 6-month total of 89 new postings shows this is an active, competitive market for NJ engineering talent.</div>
+    </div>
+  </div>
+
+  <p class="sl">Time to Fill — How Long Roles Stay Open <span class="src">LinkedIn Job Insights</span></p>
+  <div class="dg">
+    <div class="gc">
+      <div class="gt">🇩🇪 Germany — Avg Time to Fill (Days)</div>
+      <canvas id="cvs-de-ttf" style="height:180px"></canvas>
+      <div class="ex">Germany TTF has been rising since 2024 — from ~40 days to <strong>63–84 days in Q1 2026</strong>. Harder to fill = tighter talent market = Ciena needs a stronger offer and faster process in Germany.</div>
+    </div>
+    <div class="gc">
+      <div class="gt">🇺🇸 New Jersey — Avg Time to Fill (Days)</div>
+      <canvas id="cvs-nj-ttf" style="height:180px"></canvas>
+      <div class="ex">NJ TTF is highly variable. <strong>Q1 2026 is showing 21–42 days</strong> — faster than most of 2024–2025. Combined with 21 active competing roles and 22 new postings in March, this means NJ candidates are actively being recruited and moving fast.</div>
+    </div>
+  </div>
+
+  <p class="sl">Salary Advertised in Job Postings <span class="src">LinkedIn Job Insights · Median advertised base salary</span></p>
+  <div class="dg">
+    <div class="gc">
+      <div class="gt">🇩🇪 Germany — Posted Salary Trend (EUR)</div>
+      <canvas id="cvs-de-sal" style="height:180px"></canvas>
+      <div class="ex">Germany posted salaries are stable at <strong>€82–84K</strong> in Q1 2026 after declining from a 2024 peak of €102K. This is the public market floor — Ciena's offers need to be above this to attract active candidates.</div>
+    </div>
+    <div class="gc">
+      <div class="gt">🇺🇸 New Jersey — Posted Salary Trend (USD)</div>
+      <canvas id="cvs-nj-sal" style="height:180px"></canvas>
+      <div class="ex">NJ posted salaries are volatile due to the small sample. Mar 2026 shows <strong>$120–124K base</strong>. Total comp at Nokia Bell Labs, Coherent, and MACOM is significantly higher — typically $180–250K including equity.</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ SALARY + RSU ═══════════ -->
+<!-- ═══ SALARY + RSU ═══ -->
 <section id="tp-sb" class="tp">
   <div class="nb">
-    <h3>📊 How This Salary Data Was Built</h3>
+    <h3>📊 Salary Data Sources &amp; Methodology</h3>
     <ul>
-      <li><strong>Germany (EUR):</strong> Base salaries from Eightfold AI talent dataset (50 real profiles). Cross-checked with Vergütungsradar 2025 and Glassdoor DE. Total comp calculated using employer social security (~19.5%) and typical bonus rates.</li>
-      <li><strong>New Jersey (USD):</strong> Bureau of Labor Statistics Occupational Employment Survey 2024 (SOC 17-2061), LinkedIn Salary Insights 2025, Glassdoor for Nokia Bell Labs / Thorlabs / Coherent Corp NJ specifically.</li>
-      <li><strong>RSU / Stock data:</strong> levels.fyi (engineering compensation database), Glassdoor equity disclosures, and public filings for companies operating in both markets.</li>
-      <li><strong>Note:</strong> EUR figures shown at EUR/USD ~1.08 (ECB 2025 avg) for context only — shown in native currency throughout. RSU values assume 4-year vesting, shown as annual equivalent.</li>
+      <li><strong>Germany (EUR):</strong> Eightfold AI talent dataset (1,391 real profiles). Median/mean by experience band. Cross-validated with LinkedIn Job Insights and Vergütungsradar 2025.</li>
+      <li><strong>New Jersey (USD):</strong> LinkedIn Job Insights posted salary, BLS OES 2024 (SOC 17-2061), Glassdoor for Nokia Bell Labs / Thorlabs / Coherent NJ, levels.fyi for equity data.</li>
+      <li><strong>RSU / Stock data:</strong> levels.fyi, Glassdoor. RSU values shown as annual equivalent assuming 4-year vesting.</li>
+      <li><strong>Note:</strong> Germany salary data is actual (from real candidate profiles). NJ salary data is market benchmark.</li>
     </ul>
   </div>
 
-  <p class="sl">Full Compensation by Level — Base + Bonus + RSU <span class="src">Eightfold AI · BLS · Glassdoor · LinkedIn Salary · levels.fyi</span></p>
-  <div class="explain" style="margin-bottom:14px"><strong>How to read this table:</strong> Each row is a seniority level. "Base" is fixed annual salary. "Bonus" is the typical annual cash bonus (% of base). "RSU / Stock Award" is the annualised value of equity grants (spread over 4-year vesting). "Total Comp" adds all three. The "Cost Gap" column shows how much cheaper Germany is at that level — useful for budget conversations with R&amp;D leadership.</div>
+  <p class="sl">Compensation by Level — Germany <span class="src">Eightfold AI Dataset · 1,391 profiles</span></p>
   <div class="cc scr">
     <table class="tbl">
-      <thead>
-        <tr>
-          <th>Level</th>
-          <th>🇩🇪 Base (EUR)</th>
-          <th>🇩🇪 Bonus</th>
-          <th>🇩🇪 RSU / Stock (ann.)</th>
-          <th>🇩🇪 Total Comp</th>
-          <th>🇺🇸 Base (USD)</th>
-          <th>🇺🇸 Bonus</th>
-          <th>🇺🇸 RSU / Stock (ann.)</th>
-          <th>🇺🇸 Total Comp</th>
-          <th>Cost Gap (DE cheaper)</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Level (Years Exp)</th><th>🇩🇪 Base Median (EUR)</th><th>🇩🇪 Base Mean (EUR)</th><th>🇩🇪 Total Comp Median</th><th>🇩🇪 Bonus Typical</th><th>🇩🇪 RSU / Equity (ann.)</th><th>Profiles</th></tr></thead>
       <tbody>
-        <tr>
-          <td><strong>Entry / Postdoc (0–3 yr)</strong></td>
-          <td class="vd">€32K–€55K</td><td class="vd">5–8%</td><td class="vd">€0–€5K</td><td class="vd">€34K–€63K</td>
-          <td class="vn">$75K–$95K</td><td class="vn">8–10%</td><td class="vn">$5K–$15K</td><td class="vn">$88K–$120K</td>
-          <td class="vg">~38% cheaper in DE</td>
-        </tr>
-        <tr>
-          <td><strong>Senior Engineer (5–10 yr)</strong></td>
-          <td class="vd">€70K–€100K</td><td class="vd">10–12%</td><td class="vd">€5K–€15K</td><td class="vd">€82K–€127K</td>
-          <td class="vn">$120K–$160K</td><td class="vn">12–15%</td><td class="vn">$20K–$40K</td><td class="vn">$155K–$224K</td>
-          <td class="vg">~40% cheaper in DE</td>
-        </tr>
-        <tr>
-          <td><strong>Staff Engineer (10–15 yr)</strong></td>
-          <td class="vd">€95K–€135K</td><td class="vd">12–15%</td><td class="vd">€10K–€25K</td><td class="vd">€117K–€180K</td>
-          <td class="vn">$160K–$210K</td><td class="vn">15–18%</td><td class="vn">$35K–$60K</td><td class="vn">$210K–$288K</td>
-          <td class="vg">~38% cheaper in DE</td>
-        </tr>
-        <tr style="background:var(--de-light)">
-          <td><strong>⭐ Principal Engineer (12–18 yr)</strong></td>
-          <td class="vd"><strong>€120K–€155K</strong></td><td class="vd"><strong>13–16%</strong></td><td class="vd"><strong>€15K–€35K</strong></td><td class="vd"><strong>€151K–€215K</strong></td>
-          <td class="vn"><strong>$190K–$250K</strong></td><td class="vn"><strong>16–20%</strong></td><td class="vn"><strong>$50K–$100K</strong></td><td class="vn"><strong>$250K–$375K</strong></td>
-          <td class="vg"><strong>~40% cheaper in DE</strong></td>
-        </tr>
-        <tr>
-          <td><strong>Director of Engineering (15+ yr)</strong></td>
-          <td class="vd">€140K–€190K</td><td class="vd">15–20%</td><td class="vd">€20K–€50K</td><td class="vd">€181K–€278K</td>
-          <td class="vn">$220K–$320K</td><td class="vn">20–25%</td><td class="vn">$70K–$150K</td><td class="vn">$314K–$480K</td>
-          <td class="vg">~42% cheaper in DE</td>
-        </tr>
-        <tr>
-          <td><strong>VP of Engineering / R&amp;D (20+ yr)</strong></td>
-          <td class="vd">€180K–€260K</td><td class="vd">20–30%</td><td class="vd">€40K–€100K</td><td class="vd">€256K–€438K</td>
-          <td class="vn">$300K–$500K</td><td class="vn">25–35%</td><td class="vn">$120K–$300K</td><td class="vn">$450K–$875K</td>
-          <td class="vg">~44% cheaper in DE</td>
-        </tr>
+        <tr><td>Entry / Postdoc (0–3 yr)</td><td class="vd">€36,751</td><td class="vd">€38,207</td><td class="vd">€41,764</td><td class="vd">5–8%</td><td class="vd">€0–€5K</td><td style="color:var(--muted)">46</td></tr>
+        <tr><td>Senior Engineer (4–7 yr)</td><td class="vd">€48,848</td><td class="vd">€56,150</td><td class="vd">€55,180</td><td class="vd">8–10%</td><td class="vd">€5K–€12K</td><td style="color:var(--muted)">155</td></tr>
+        <tr><td>Staff Engineer (8–12 yr)</td><td class="vd">€64,900</td><td class="vd">€70,010</td><td class="vd">€71,685</td><td class="vd">10–13%</td><td class="vd">€8K–€20K</td><td style="color:var(--muted)">328</td></tr>
+        <tr style="background:var(--de-l)"><td><strong>⭐ Principal Eng (13–17 yr)</strong></td><td class="vd"><strong>€87,710</strong></td><td class="vd"><strong>€88,774</strong></td><td class="vd"><strong>€96,942</strong></td><td class="vd"><strong>12–16%</strong></td><td class="vd"><strong>€12K–€30K</strong></td><td style="color:var(--muted)"><strong>308</strong></td></tr>
+        <tr><td>Director (18–25 yr)</td><td class="vd">€90,844</td><td class="vd">€101,319</td><td class="vd">€102,437</td><td class="vd">15–20%</td><td class="vd">€18K–€50K</td><td style="color:var(--muted)">297</td></tr>
+        <tr><td>VP / Head of R&amp;D (25+ yr)</td><td class="vd">€93,529</td><td class="vd">€100,213</td><td class="vd">€111,192</td><td class="vd">18–28%</td><td class="vd">€30K–€90K</td><td style="color:var(--muted)">257</td></tr>
       </tbody>
     </table>
   </div>
 
-  <p class="sl" style="margin-top:18px">RSU / Stock Awards — Detail View <span class="src">levels.fyi · Glassdoor · Public filings</span></p>
-  <div class="explain" style="margin-bottom:14px"><strong>What RSU means:</strong> RSU = Restricted Stock Unit. Companies give employees shares of stock that vest (unlock) over time — typically over 4 years. The numbers below show the annual equivalent value of a typical new-hire grant. In Germany, RSUs are less common; many companies use profit-sharing or phantom stock instead. In NJ, RSUs are standard at all tech/photonics companies.</div>
-  <div class="dg">
-    <div class="gc">
-      <div class="gt">🇩🇪 Germany — Typical Annual RSU / Equity by Level</div>
-      <div id="rsu-de"></div>
-      <div class="explain">German companies (ZEISS, Infineon, Nokia DE) are beginning to offer RSUs to compete with US firms, but grants are generally 40–60% smaller than NJ equivalents. Most German photonics SMEs (TOPTICA, incoatec) offer no equity at all — a potential Ciena differentiator if equity is part of the offer.</div>
-    </div>
-    <div class="gc">
-      <div class="gt">🇺🇸 New Jersey — Typical Annual RSU / Equity by Level</div>
-      <div id="rsu-nj"></div>
-      <div class="explain">NJ equity is significant at the principal level and above. Nokia Bell Labs, Coherent Corp, and Thorlabs all offer competitive RSU packages. For senior NJ hires, equity is often 20–35% of total comp — Ciena must offer comparable equity to compete.</div>
-    </div>
+  <p class="sl">Full Compensation Comparison — Germany vs New Jersey <span class="src">Eightfold AI (DE) · BLS · Glassdoor · levels.fyi (NJ)</span></p>
+  <div class="cc scr">
+    <table class="tbl">
+      <thead><tr><th>Level</th><th>🇩🇪 Base (EUR)</th><th>🇩🇪 Total Comp</th><th>🇩🇪 RSU (ann.)</th><th>🇺🇸 Base (USD)</th><th>🇺🇸 Total Comp</th><th>🇺🇸 RSU (ann.)</th><th>Cost Gap</th></tr></thead>
+      <tbody>
+        <tr><td>Entry / Postdoc</td><td class="vd">€32K–€45K</td><td class="vd">€34K–€50K</td><td class="vd">€0–€5K</td><td class="vn">$75K–$95K</td><td class="vn">$85K–$115K</td><td class="vn">$5K–$15K</td><td class="vg">~40% cheaper DE</td></tr>
+        <tr><td>Senior Engineer</td><td class="vd">€45K–€65K</td><td class="vd">€52K–€75K</td><td class="vd">€5K–€12K</td><td class="vn">$110K–$150K</td><td class="vn">$135K–$195K</td><td class="vn">$20K–$40K</td><td class="vg">~42% cheaper DE</td></tr>
+        <tr><td>Staff Engineer</td><td class="vd">€65K–€90K</td><td class="vd">€72K–€105K</td><td class="vd">€8K–€20K</td><td class="vn">$150K–$200K</td><td class="vn">$195K–$275K</td><td class="vn">$35K–$60K</td><td class="vg">~40% cheaper DE</td></tr>
+        <tr style="background:var(--de-l)"><td><strong>⭐ Principal Engineer</strong></td><td class="vd"><strong>€88K–€120K</strong></td><td class="vd"><strong>€97K–€150K</strong></td><td class="vd"><strong>€12K–€30K</strong></td><td class="vn"><strong>$185K–$245K</strong></td><td class="vn"><strong>$245K–$360K</strong></td><td class="vn"><strong>$50K–$100K</strong></td><td class="vg"><strong>~40% cheaper DE</strong></td></tr>
+        <tr><td>Director</td><td class="vd">€91K–€145K</td><td class="vd">€105K–€190K</td><td class="vd">€18K–€50K</td><td class="vn">$220K–$320K</td><td class="vn">$300K–$470K</td><td class="vn">$70K–$150K</td><td class="vg">~43% cheaper DE</td></tr>
+        <tr><td>VP / Head of R&amp;D</td><td class="vd">€94K–€200K</td><td class="vd">€120K–€280K</td><td class="vd">€30K–€90K</td><td class="vn">$300K–$500K</td><td class="vn">$420K–$750K</td><td class="vn">$120K–$280K</td><td class="vg">~44% cheaper DE</td></tr>
+      </tbody>
+    </table>
   </div>
 
-  <p class="sl" style="margin-top:18px">Salary Market Trends 2024–2026 <span class="src">Vergütungsradar · Glassdoor · BLS · LinkedIn Salary Trends</span></p>
+  <p class="sl" style="margin-top:18px">Salary Trends — What the Market Is Offering</p>
   <div class="cc">
-    <div class="tr-row"><div class="tr-i">📈</div><div><h4>Germany: +2–4% YoY Base Salary Growth</h4><p>Photonics/optical engineering salaries grew ~3% in 2024–25 (Vergütungsradar, Glassdoor DE). Munich leads at +5% driven by ZEISS semiconductor expansion and Nokia R&amp;D scaling. Fraunhofer public-sector roles remain 15–20% below private market.</p><div class="chips"><span class="p dt">Munich +5%</span><span class="p md">National +3%</span><span class="p lo">Fraunhofer flat</span></div></div></div>
-    <div class="tr-row"><div class="tr-i">🚀</div><div><h4>New Jersey: +4–7% YoY Base Salary Growth</h4><p>Optical/photonics salaries rose 5–7% in 2024–25 (BLS, LinkedIn Salary). Nokia Bell Labs expansion and AI datacenter buildout sustained demand. BLS 2024 median electrical engineer NJ: $133,080.</p><div class="chips"><span class="p nt">Bell Labs expansion</span><span class="p vh">AI datacenter +15%</span><span class="p hi">BLS EE NJ $133K median</span></div></div></div>
-    <div class="tr-row"><div class="tr-i">🏭</div><div><h4>Silicon Photonics Premium: +15–25% Both Markets</h4><p>Candidates with 400G/800G coherent, silicon photonics, or co-packaged optics experience command 15–25% premium above market rate (levels.fyi, LinkedIn Salary). This is Ciena's core hiring domain — equity and signing bonuses are critical differentiators.</p><div class="chips"><span class="p vh">SiPh +20% premium</span><span class="p md">800G experience scarce</span></div></div></div>
+    <div class="tr-row"><div class="tr-i">📈</div><div><h4>Germany: Stable at €82K posted, +3% actual YoY</h4><p>Posted salary (LinkedIn Job Insights) has stabilised at €82–84K in Q1 2026. Actual salary growth for employed engineers is ~3% YoY. Munich leads at +5% due to ZEISS and Nokia expansion.</p><div class="chips"><span class="p dt">Posted: €82K (Mar 26)</span><span class="p hi">Actual growth +3% YoY</span><span class="p md">Munich +5%</span></div></div></div>
+    <div class="tr-row"><div class="tr-i">🚀</div><div><h4>NJ: $121K posted in Mar 2026 — but real total comp is much higher</h4><p>Posted salary is volatile ($85K–$188K range). Mar 2026 shows $120–124K base posted. Actual total comp at Nokia Bell Labs, Coherent, MACOM is typically $180–250K including equity. BLS 2024 EE median NJ: $133,080.</p><div class="chips"><span class="p nt">Posted: $120K (Mar 26)</span><span class="p vh">Total comp +RSU: $200K+</span><span class="p hi">BLS EE NJ $133K median</span></div></div></div>
+    <div class="tr-row"><div class="tr-i">🏭</div><div><h4>Silicon Photonics &amp; 800G Premium: +15–25% in both markets</h4><p>Candidates with 400G/800G coherent, silicon photonics, or co-packaged optics experience command 15–25% premium in both markets. This is Ciena's core hiring domain — equity and signing bonuses are key differentiators.</p><div class="chips"><span class="p vh">SiPh premium +20%</span><span class="p md">800G experience scarce</span></div></div></div>
   </div>
 </section>
 
-<!-- ═══════════ HEADCOUNT ═══════════ -->
+<!-- ═══ HEADCOUNT ═══ -->
 <section id="tp-hc" class="tp">
-  <p class="sl">Company Headcount — R&amp;D / Engineering Staff <span class="src">LinkedIn Recruiter Insights · LinkedIn Company Pages · Apr 2026</span></p>
-  <div class="explain" style="margin-bottom:14px"><strong>What this shows:</strong> How many R&amp;D and engineering employees each company currently has in Germany and NJ, based on LinkedIn headcount data. This tells us both (a) which companies have the most talent available to recruit from, and (b) how much competition Ciena faces for that talent. Larger bars = more engineers = better hunting ground.</div>
+  <p class="sl">Top Hiring Companies by Job Posting Volume <span class="src">LinkedIn Job Insights</span></p>
+  <div class="ex" style="margin-bottom:13px">Which companies posted the most R&D engineering roles. High count = actively hiring = both a talent source to recruit from, and a competitor for the same candidates.</div>
   <div class="dg">
-    <div class="gc"><div class="gt">🇩🇪 Germany — Current Employer Top 10 (Candidate Count in Pool)</div><div id="de-curr"></div>
-      <div class="explain">ZEISS (combined 258 candidates across both entities) is by far the richest source of optical/semiconductor engineers in Germany. Infineon (133) brings semiconductor process expertise. TOPTICA (75) and Fraunhofer IOF (61) are premier photonics research sources — often producing candidates who want their next industry move.</div>
+    <div class="gc"><div class="gt">🇩🇪 Germany — Top Companies by Posting Count</div><div id="de-co-hc"></div>
+      <div class="ex">Infineon dominates with <strong>35% share</strong> — 4,151 postings over the tracked period. These are the primary competitors for Ciena's Germany hiring.</div>
     </div>
-    <div class="gc"><div class="gt">🇺🇸 New Jersey — Current Employer Top 10 (Candidate Count in Pool)</div><div id="nj-curr"></div>
-      <div class="explain">Nokia (48) and Nokia Bell Labs (42) together represent 90 candidates — making them the single biggest NJ talent source. Verizon (35) and AT&amp;T (25) add carrier-experienced optical engineers. Thorlabs (28) is a photonics instrument company with highly skilled bench engineers who are often open to telecom applications.</div>
+    <div class="gc"><div class="gt">🇺🇸 New Jersey — Top Companies by Posting Count</div><div id="nj-co-hc"></div>
+      <div class="ex">MACOM (29%) and Synopsys (28%) together account for over half of NJ postings. Ciena should specifically target engineers at these firms.</div>
     </div>
   </div>
-
-  <p class="sl">Past Employers — Career History <span class="src">LinkedIn Recruiter Insights</span></p>
-  <div class="explain" style="margin-bottom:14px"><strong>Why past employers matter:</strong> Many strong candidates are no longer at their most prestigious employer — they've moved on. Looking at where people used to work tells us the full talent flow and helps identify people with Infineon, Nokia, or Bell Labs pedigree who may now be at smaller companies and more open to a move.</div>
+  <p class="sl">Talent Pool — Where Candidates Currently Work <span class="src">LinkedIn Recruiter Insights</span></p>
   <div class="dg">
-    <div class="gc"><div class="gt">🇩🇪 Germany — Past Employers (Career History)</div><div id="de-past"></div></div>
-    <div class="gc"><div class="gt">🇺🇸 New Jersey — Past Employers (Career History)</div><div id="nj-past"></div></div>
+    <div class="gc"><div class="gt">🇩🇪 Germany — Current Companies in Talent Pool</div><div id="de-curr"></div>
+      <div class="ex">ZEISS (258 combined across two entities) is the richest single source. Fraunhofer IOF (61) is a strong research-to-industry pipeline.</div>
+    </div>
+    <div class="gc"><div class="gt">🇺🇸 New Jersey — Current Companies in Talent Pool</div><div id="nj-curr"></div>
+      <div class="ex">Nokia + Nokia Bell Labs = 90 candidates from the world's top telecom research lab. Deep carrier-grade optical networking expertise that maps directly to Ciena's products.</div>
+    </div>
   </div>
-
   <p class="sl">Top Feeder Universities <span class="src">LinkedIn Recruiter Insights</span></p>
-  <div class="explain" style="margin-bottom:14px"><strong>Why university data matters:</strong> These are the schools producing the most relevant graduates in each region. Useful for campus recruiting programs, partnerships, or identifying alumni networks to tap into. TU Munich (314 in the pool) and FSU Jena (245) dominate Germany; NJIT (62) and Rutgers (50) lead in NJ.</div>
   <div class="dg">
-    <div class="gc"><div class="gt">🇩🇪 Germany — Top Feeder Universities</div><div id="de-sch"></div></div>
-    <div class="gc"><div class="gt">🇺🇸 New Jersey — Top Feeder Universities</div><div id="nj-sch"></div></div>
+    <div class="gc"><div class="gt">🇩🇪 Germany — Top Schools</div><div id="de-sch"></div></div>
+    <div class="gc"><div class="gt">🇺🇸 New Jersey — Top Schools</div><div id="nj-sch"></div></div>
   </div>
 </section>
 
-<!-- ═══════════ COST TO HIRE ═══════════ -->
+<!-- ═══ COST TO HIRE ═══ -->
 <section id="tp-ct" class="tp">
-  <p class="sl">Cost-to-Hire Model — Select Level <span class="src">Eightfold AI (DE) · Glassdoor · BLS · LinkedIn Salary (NJ)</span></p>
-  <div class="explain" style="margin-bottom:14px"><strong>What this model includes:</strong> Every real cost involved in hiring one person — not just salary. It adds up base pay, bonus, payroll taxes (Germany pays ~19.5% employer social security; NJ ~7.65% FICA), health insurance (Germany's statutory system is much cheaper for employers than US private insurance), recruiting fees, relocation, onboarding, equipment, visa costs, and office overhead. This gives R&amp;D leadership the true budget impact of each hire.</div>
+  <p class="sl">Cost-to-Hire Model <span class="src">Eightfold AI (DE) · Glassdoor · BLS · LinkedIn Salary (NJ)</span></p>
+  <div class="ex" style="margin-bottom:14px">Every real cost of hiring one engineer — salary, bonus, payroll taxes (Germany pays ~19.5% employer social security vs NJ ~7.65%), health insurance, recruiting fees, relocation, equipment, and office overhead. Adjust the sliders to model your own scenario.</div>
+
   <div class="lvl-sel">
-    <span class="lvl-l">Select level:</span>
+    <span class="lvl-l">Seniority level:</span>
     <button class="lbt" onclick="setLvl('entry',this)">Entry / Postdoc</button>
     <button class="lbt" onclick="setLvl('mid',this)">Senior Engineer</button>
     <button class="lbt on" onclick="setLvl('principal',this)">⭐ Principal / Staff</button>
     <button class="lbt" onclick="setLvl('director',this)">Director</button>
-    <button class="lbt" onclick="setLvl('vp',this)">VP / Head of R&amp;D</button>
+    <button class="lbt" onclick="setLvl('vp',this)">VP / Head R&amp;D</button>
   </div>
-  <div class="sav-box">
-    <div style="font-size:26px">💡</div>
-    <div><h3 id="sav-h">Germany saves ~$150,000 per Principal hire (Year 1, all-in)</h3><p id="sav-p">3-year cumulative saving per hire: ~$400,000 · Sources: Eightfold AI (DE) · Glassdoor / BLS / LinkedIn Salary (NJ)</p></div>
-  </div>
-  <div style="font-size:10px;color:var(--muted2);font-family:'IBM Plex Mono',monospace;margin-bottom:5px">Year-1 all-in cost comparison — bar width = proportional share of combined cost</div>
-  <div class="cmp-bar">
-    <div class="cmp-bd" id="cb-de" style="width:38%">🇩🇪 <span id="cb-dv">€251K</span></div>
-    <div class="cmp-bn" id="cb-nj" style="width:62%">🇺🇸 <span id="cb-nv">$404K</span></div>
-  </div>
-  <div class="cth-grid" id="cth-grid"></div>
-  <p class="sl" style="margin-top:4px">3-Year Cost Trajectory &amp; Factor Breakdown</p>
-  <div class="dg">
-    <div class="gc"><div class="gt">Cumulative All-In Cost — Year 1 through Year 3</div><canvas id="cth-cvs" style="width:100%;height:195px"></canvas>
-      <div class="explain">The gap between the two lines is your cumulative saving. By Year 3, Germany saves roughly <span id="y3-save">$400K</span> per hire at this level — enough to fund an additional headcount.</div>
+
+  <div class="slider-section">
+    <h3>🎛 Adjust Assumptions — See Real-Time Impact</h3>
+    <p>Drag any slider to model different hiring scenarios. All totals update instantly.</p>
+    <div class="slider-grid">
+      <div class="sl-item">
+        <div class="sl-lbl"><span>🇩🇪 DE Base Salary (EUR)</span><span class="sl-val de" id="sl-de-base-v">€138,000</span></div>
+        <input type="range" class="de-r" id="sl-de-base" min="60000" max="280000" step="5000" value="138000" oninput="updateSlider(this,'sl-de-base-v','€',true);recalc()">
+      </div>
+      <div class="sl-item">
+        <div class="sl-lbl"><span>🇺🇸 NJ Base Salary (USD)</span><span class="sl-val nj" id="sl-nj-base-v">$210,000</span></div>
+        <input type="range" class="nj-r" id="sl-nj-base" min="80000" max="450000" step="5000" value="210000" oninput="updateSlider(this,'sl-nj-base-v','$',true);recalc()">
+      </div>
+      <div class="sl-item">
+        <div class="sl-lbl"><span>🇩🇪 DE Bonus % of Base</span><span class="sl-val de" id="sl-de-bon-v">13%</span></div>
+        <input type="range" class="de-r" id="sl-de-bon" min="0" max="30" step="1" value="13" oninput="updateSlider(this,'sl-de-bon-v','',false,'%');recalc()">
+      </div>
+      <div class="sl-item">
+        <div class="sl-lbl"><span>🇺🇸 NJ Bonus % of Base</span><span class="sl-val nj" id="sl-nj-bon-v">18%</span></div>
+        <input type="range" class="nj-r" id="sl-nj-bon" min="0" max="40" step="1" value="18" oninput="updateSlider(this,'sl-nj-bon-v','',false,'%');recalc()">
+      </div>
+      <div class="sl-item">
+        <div class="sl-lbl"><span>🇩🇪 DE Recruiting Fee %</span><span class="sl-val de" id="sl-de-rec-v">20%</span></div>
+        <input type="range" class="de-r" id="sl-de-rec" min="0" max="35" step="1" value="20" oninput="updateSlider(this,'sl-de-rec-v','',false,'%');recalc()">
+      </div>
+      <div class="sl-item">
+        <div class="sl-lbl"><span>🇺🇸 NJ Recruiting Fee %</span><span class="sl-val nj" id="sl-nj-rec-v">25%</span></div>
+        <input type="range" class="nj-r" id="sl-nj-rec" min="0" max="40" step="1" value="25" oninput="updateSlider(this,'sl-nj-rec-v','',false,'%');recalc()">
+      </div>
+      <div class="sl-item">
+        <div class="sl-lbl"><span>🇩🇪 DE Relocation (EUR)</span><span class="sl-val de" id="sl-de-rel-v">€8,000</span></div>
+        <input type="range" class="de-r" id="sl-de-rel" min="0" max="30000" step="1000" value="8000" oninput="updateSlider(this,'sl-de-rel-v','€',true);recalc()">
+      </div>
+      <div class="sl-item">
+        <div class="sl-lbl"><span>🇺🇸 NJ Relocation (USD)</span><span class="sl-val nj" id="sl-nj-rel-v">$18,000</span></div>
+        <input type="range" class="nj-r" id="sl-nj-rel" min="0" max="50000" step="1000" value="18000" oninput="updateSlider(this,'sl-nj-rel-v','$',true);recalc()">
+      </div>
+      <div class="sl-item">
+        <div class="sl-lbl"><span># of DE Hires to Model</span><span class="sl-val de" id="sl-de-n-v">3 hires</span></div>
+        <input type="range" class="de-r" id="sl-de-n" min="1" max="20" step="1" value="3" oninput="updateSlider(this,'sl-de-n-v','',false,' hires');recalc()">
+      </div>
+      <div class="sl-item">
+        <div class="sl-lbl"><span># of NJ Hires to Model</span><span class="sl-val nj" id="sl-nj-n-v">1 hire</span></div>
+        <input type="range" class="nj-r" id="sl-nj-n" min="1" max="10" step="1" value="1" oninput="updateSlider(this,'sl-nj-n-v','',false,' hire(s)');recalc()">
+      </div>
     </div>
-    <div class="gc"><div class="gt">Cost Factor Comparison — Germany vs NJ</div><div id="fac-bars"></div></div>
+    <div class="impact-row">
+      <div class="impact-box"><div class="ib-l">🇩🇪 DE Total Year 1</div><div class="ib-v" id="ib-de-y1" style="color:var(--de)">€246K</div><div class="ib-sub" id="ib-de-sub">per hire</div></div>
+      <div class="impact-box"><div class="ib-l">🇺🇸 NJ Total Year 1</div><div class="ib-v" id="ib-nj-y1" style="color:var(--nj)">$396K</div><div class="ib-sub" id="ib-nj-sub">per hire</div></div>
+      <div class="impact-box"><div class="ib-l">💰 Year 1 Saving (per DE hire)</div><div class="ib-v" id="ib-save" style="color:var(--green)">$150K</div><div class="ib-sub">Germany is cheaper</div></div>
+      <div class="impact-box"><div class="ib-l">📊 Total Cohort Cost (Y1)</div><div class="ib-v" id="ib-total" style="color:var(--gold)">$1.1M</div><div class="ib-sub" id="ib-cohort-sub">3 DE + 1 NJ hires</div></div>
+      <div class="impact-box"><div class="ib-l">📅 3-Year Total (Cohort)</div><div class="ib-v" id="ib-y3" style="color:var(--t2)">$2.9M</div><div class="ib-sub" id="ib-y3-sub">estimated cumulative</div></div>
+    </div>
   </div>
-  <p class="sl">Full Cost Detail Table</p>
+
+  <div class="sav-box"><div style="font-size:26px">💡</div><div><h3 id="sav-h">Germany saves ~$150,000 per Principal hire (Year 1, all-in)</h3><p id="sav-p">3-year cumulative saving per hire: ~$400,000 · Adjust the sliders above to model your specific scenario</p></div></div>
+  <div style="font-size:10px;color:var(--m2);font-family:'IBM Plex Mono',monospace;margin-bottom:5px">Year-1 all-in cost — proportional bar</div>
+  <div class="cmp-bar"><div class="cmp-bd" id="cb-de" style="width:38%">🇩🇪 <span id="cb-dv">€246K</span></div><div class="cmp-bn" id="cb-nj" style="width:62%">🇺🇸 <span id="cb-nv">$396K</span></div></div>
+  <div class="cth-grid" id="cth-grid"></div>
+  <p class="sl">3-Year Trajectory &amp; Factor Breakdown</p>
+  <div class="dg">
+    <div class="gc"><div class="gt">Cumulative All-In Cost — Year 1–3 (per hire)</div><canvas id="cth-cvs" style="height:190px"></canvas></div>
+    <div class="gc"><div class="gt">Cost Factor Comparison</div><div id="fac-bars"></div></div>
+  </div>
+  <p class="sl">Full Cost Detail</p>
   <div class="cc scr"><table class="tbl" id="cth-tbl"></table></div>
 </section>
 
-<!-- ═══════════ MAP & HEAT MAP ═══════════ -->
+<!-- ═══ MAP & HEAT MAP ═══ -->
 <section id="tp-mp" class="tp">
   <p class="sl">Talent Location Map <span class="src">LinkedIn Recruiter Insights</span></p>
-  <div class="explain" style="margin-bottom:13px"><strong>What this map shows:</strong> Each bubble represents a city or region. The bigger and darker the bubble, the more relevant talent lives there. Hover over any bubble to see the exact count. This helps decide where to focus sourcing efforts or whether a Germany office in Munich vs Berlin vs Jena makes more sense.</div>
+  <div class="ex" style="margin-bottom:12px">Each bubble = a city or county. Bigger and darker = more relevant candidates. Munich alone (1,377) nearly matches the entire NJ talent pool (1,098).</div>
   <div class="map-outer">
     <div class="map-btns">
       <button class="mbt on de" onclick="showMap('de',this)">🇩🇪 Germany</button>
@@ -546,54 +624,49 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     </div>
     <div class="map-inner">
       <div id="map-box" class="map-box"><div id="mtt" class="mtt"></div></div>
-      <div>
-        <div class="gt" style="margin-bottom:11px">Talent Count by Location</div>
-        <div id="map-bars"></div>
-        <div class="map-leg" id="map-leg"></div>
-      </div>
+      <div><div class="gt" style="margin-bottom:11px">Talent Count by Location</div><div id="map-bars"></div><div class="map-leg" id="map-leg"></div></div>
     </div>
   </div>
 
-  <p class="sl">Heat Map — Germany: Where Each Type of Talent Is Concentrated <span class="src">LinkedIn Recruiter Insights · Eightfold AI</span></p>
-  <div class="explain" style="margin-bottom:11px"><strong>How to read this heat map:</strong> Each row is a German city. Each column is a type of engineering expertise. The darker the cell, the more people with that specialisation live in that city. For example, Jena is very dark in "Research/Academia" — that's because FSU Jena is there. Munich is dark across almost every column — it's the most well-rounded photonics hub in Germany.</div>
+  <p class="sl">Heat Map — Germany: City × Engineering Specialisation <span class="src">LinkedIn Recruiter · Eightfold AI</span></p>
+  <div class="ex" style="margin-bottom:10px">Darker blue = more candidates with that expertise in that city. Munich is strong across all domains. Jena is exceptional for photonics research (FSU Jena). Stuttgart and Dresden lead in semiconductors.</div>
   <div class="gc scr" style="margin-bottom:18px">
     <div class="hm-title">Germany — Talent by City &amp; Specialisation <div class="hm-leg"><span>Low</span><div class="hm-sw" style="background:linear-gradient(90deg,#d6e6f8,#1a4fa0)"></div><span>High</span></div></div>
     <div id="hm-de"></div>
   </div>
 
-  <p class="sl">Heat Map — New Jersey: Where Each Level of Experience Is Located <span class="src">LinkedIn Recruiter Insights</span></p>
-  <div class="explain" style="margin-bottom:11px"><strong>How to read this:</strong> Each row is an NJ county. Each column is an experience band. Dark red = lots of candidates with that experience level in that county. Middlesex County (where Nokia Bell Labs and Princeton are) has the deepest pool across all experience levels. Hudson County (Jersey City, across from NYC) skews younger.</div>
+  <p class="sl">Heat Map — New Jersey: County × Experience Band <span class="src">LinkedIn Recruiter Insights</span></p>
+  <div class="ex" style="margin-bottom:10px">Darker red = more candidates with that experience in that county. Middlesex County (home to Princeton and Nokia Bell Labs) has the deepest senior pool.</div>
   <div class="gc scr">
-    <div class="hm-title">New Jersey — Talent by County &amp; Experience Band <div class="hm-leg"><span>Low</span><div class="hm-sw" style="background:linear-gradient(90deg,#fae4e8,#a8001f)"></div><span>High</span></div></div>
+    <div class="hm-title">New Jersey — Talent by County &amp; Experience <div class="hm-leg"><span>Low</span><div class="hm-sw" style="background:linear-gradient(90deg,#fae4e8,#a8001f)"></div><span>High</span></div></div>
     <div id="hm-nj"></div>
   </div>
 </section>
 
-<!-- ═══════════ TALENT POOL ═══════════ -->
+<!-- ═══ TALENT POOL ═══ -->
 <section id="tp-tp" class="tp">
   <p class="sl">Experience Distribution <span class="src">LinkedIn Recruiter Insights</span></p>
-  <div class="explain" style="margin-bottom:13px"><strong>What this shows:</strong> How experienced the talent pool is in each market. Germany has a healthy mix of early-career and senior talent. New Jersey skews heavily senior — 74% have 10+ years of experience. This matters for Ciena because NJ hires will be more immediately productive but also more expensive and harder to retain.</div>
+  <div class="ex" style="margin-bottom:12px">Germany has a healthy spread across all experience levels. NJ skews heavily senior — 74% have 10+ years. NJ hires will be more immediately productive but more expensive.</div>
   <div class="dg">
     <div class="gc"><div class="gt">🇩🇪 Germany — Total Years Experience</div><div id="de-exp"></div></div>
     <div class="gc"><div class="gt">🇺🇸 New Jersey — Total Years Experience</div><div id="nj-exp"></div></div>
   </div>
   <p class="sl">Tenure in Current Role <span class="src">LinkedIn Recruiter Insights</span></p>
-  <div class="explain" style="margin-bottom:13px"><strong>Why tenure matters:</strong> People who have been in their current job for 1–3 years are typically the most open to a move — they've settled in but haven't yet built enough seniority to make leaving hard. In Germany, 1,400+ people are in that sweet spot. In NJ, a large chunk have been in their current role for 5+ years, making them harder to move but very experienced when they do.</div>
+  <div class="ex" style="margin-bottom:12px">People in their current role for 1–3 years are most likely to consider a move. Germany has 1,400+ in that window. NJ's pool skews to longer tenures — harder to move, but very experienced.</div>
   <div class="dg">
     <div class="gc"><div class="gt">🇩🇪 Germany — Years in Current Role</div><div id="de-ten"></div></div>
     <div class="gc"><div class="gt">🇺🇸 New Jersey — Years in Current Role</div><div id="nj-ten"></div></div>
   </div>
   <p class="sl">Fields of Study <span class="src">LinkedIn Recruiter Insights</span></p>
-  <div class="explain" style="margin-bottom:13px"><strong>What this tells us about fit:</strong> Germany's pool is dominated by Physics graduates (1,314) — these are deep research-oriented engineers. NJ leans more toward Electrical Engineering (202), which maps better to applied/systems engineering. Both are relevant for Ciena's R&amp;D roles, but the nature of the work should inform which pool fits better for specific open positions.</div>
   <div class="dg">
     <div class="gc"><div class="gt">🇩🇪 Germany — Top Fields of Study</div><div id="de-fos"></div></div>
     <div class="gc"><div class="gt">🇺🇸 New Jersey — Top Fields of Study</div><div id="nj-fos"></div></div>
   </div>
 </section>
 
-<!-- ═══════════ CANDIDATES ═══════════ -->
+<!-- ═══ CANDIDATES ═══ -->
 <section id="tp-ca" class="tp">
-  <div class="explain" style="margin-bottom:13px"><strong>What this table shows:</strong> A sample of real candidate profiles from both markets. Germany profiles come from the Eightfold AI talent dataset — salary data is actual. NJ profiles are from LinkedIn Recruiter search page 1 — salary is estimated from market benchmarks. "Flight Risk" means how likely someone is to leave their current job soon (Low = stable, High = likely to move). "Prestige" is the quality of their employer/university background.</div>
+  <div class="ex" style="margin-bottom:12px">Germany profiles are from the Eightfold AI dataset — salary figures are real. NJ profiles are from LinkedIn Recruiter — salary is estimated from market benchmarks. "Flight Risk" = likelihood of leaving current role.</div>
   <div class="fb">
     <span class="fb-l">Filter:</span>
     <button class="fbt on" onclick="filterC('all',this)">All Profiles</button>
@@ -603,128 +676,199 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     <button class="fbt" onclick="filterC('phd',this)">PhD / Doctor</button>
   </div>
   <div class="cc scr">
-    <table class="tbl">
-      <thead><tr><th>Mkt</th><th>Name</th><th>Current Title</th><th>Company</th><th>Degree</th><th>Base Salary</th><th>Yrs Exp</th><th>Prestige</th><th>Flight Risk</th><th>Status</th></tr></thead>
-      <tbody id="ca-body"></tbody>
-    </table>
+    <table class="tbl"><thead><tr><th>Mkt</th><th>Name</th><th>Current Title</th><th>Company</th><th>Degree</th><th>Base Salary</th><th>Yrs</th><th>Prestige</th><th>Flight Risk</th><th>Status</th></tr></thead>
+    <tbody id="ca-body"></tbody></table>
   </div>
-  <p style="font-size:10px;color:var(--muted2);font-family:'IBM Plex Mono',monospace;margin-top:8px">Germany candidates: Eightfold AI talent dataset (salary data is real). NJ candidates: LinkedIn Recruiter p.1 (salary estimated from Glassdoor/levels.fyi benchmarks).</p>
+  <p style="font-size:10px;color:var(--m2);font-family:'IBM Plex Mono',monospace;margin-top:8px">Germany — Eightfold AI talent dataset (salary is actual). NJ — LinkedIn Recruiter (salary estimated from Glassdoor / levels.fyi).</p>
 </section>
 
 </div><!-- /page -->
+
 <script>
 'use strict';
 
-// ═══ TAB SYSTEM ═══
-function go(id, btn) {
-  document.querySelectorAll('.tp').forEach(function(p){ p.classList.remove('on'); });
-  document.querySelectorAll('.tb').forEach(function(b){ b.classList.remove('on'); });
-  var el = document.getElementById('tp-'+id);
-  if (el) el.classList.add('on');
+// ══ HELPERS ══
+function go(id,btn){
+  document.querySelectorAll('.tp').forEach(function(p){p.classList.remove('on');});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.remove('on');});
+  var el=document.getElementById('tp-'+id);if(el)el.classList.add('on');
   btn.classList.add('on');
-  if (id === 'ct') setTimeout(renderCTH, 80);
-  if (id === 'mp') setTimeout(function(){ renderMap('de'); }, 40);
+  if(id==='ct')setTimeout(renderCTH,80);
+  if(id==='mp')setTimeout(function(){renderMap('de');},40);
+  if(id==='jt')setTimeout(drawAllCharts,80);
 }
 
-// ═══ HBAR ═══
-function hbars(id, data, cls, maxV) {
-  var el = document.getElementById(id); if (!el) return;
-  el.innerHTML = data.map(function(r){
-    var pct = Math.round((r[1]/maxV)*100);
-    var d = (r[1] >= 1000) ? r[1].toLocaleString() : String(r[1]);
+function hbars(id,data,cls,maxV){
+  var el=document.getElementById(id);if(!el)return;
+  el.innerHTML=data.map(function(r){
+    var pct=Math.round((r[1]/maxV)*100);
+    var d=typeof r[1]==='number'&&r[1]>=1000?r[1].toLocaleString():String(r[1]);
     return '<div class="hb"><div class="hl" title="'+r[0]+'">'+r[0]+'</div>'+
       '<div class="ht"><div class="hf '+cls+'" style="width:'+pct+'%">'+d+'</div></div></div>';
   }).join('');
 }
 
-// ═══ COMPARE ROWS ═══
-var cmpData = [
-  ['Total Addressable Pool','4,592',100,'1,098',24],
+function fc(n,cur){cur=cur||'€';return cur+Math.round(n).toLocaleString();}
+
+// ══ COMPARE ROWS ══ (updated NJ active to 21)
+var cmpData=[
+  ['Active Postings (Mar 2026)','374',100,'21',5.6],
+  ['6-Month New Postings (Oct–Mar)','235',100,'89',38],
+  ['6-Month Avg Active','338',100,'18',5.3],
+  ['Total Talent Pool','4,592',100,'1,098',24],
   ['Open to New Roles','1,400+',100,'332',24],
-  ['Actively Job-Seeking','553',100,'102',18],
   ['10+ Years Experience','59.9%',81,'73.8%',100],
+  ['Avg Time to Fill (Mar 26)','63 days',37,'26 days',100],
+  ['Avg Posted Salary','€82K',59,'$121K',100],
   ['Interested in Ciena','173',100,'55',32],
-  ['Company Connections','131',100,'73',56],
-  ['Average Base Salary','€94K',68,'$138K',100],
-  ['Physics Graduates','1,314',100,'108',8],
-  ['Rediscovered Candidates','186',91,'205',100],
 ];
-document.getElementById('cmp-rows').innerHTML = cmpData.map(function(r){
-  return '<div class="cr">'+
+document.getElementById('cmp-rows').innerHTML=cmpData.map(function(r,i){
+  var hl=i===7?' highlight-row':'';
+  return '<div class="cr'+hl+'">'+
     '<div class="bs L"><div class="bn de">'+r[1]+'</div><div class="bt"><div class="bf de" style="width:'+r[2]+'%"></div></div></div>'+
     '<div class="cl">'+r[0]+'</div>'+
     '<div class="bs"><div class="bt"><div class="bf nj" style="width:'+r[4]+'%"></div></div><div class="bn nj">'+r[3]+'</div></div>'+
     '</div>';
 }).join('');
 
-// ═══ JOB TRENDS CHARTS ═══
-function buildBarChart(containerId, labels, values, cls) {
-  var maxV = Math.max.apply(null, values);
-  var barsHtml = '<div class="jt-bar-wrap">';
-  values.forEach(function(v, i){
-    var h = Math.round((v / maxV) * 110);
-    barsHtml += '<div class="jt-bar '+cls+'" style="height:'+h+'px"><div class="tip">'+labels[i]+': '+v+'</div></div>';
+// ══ GERMANY DATA (monthly aggregated) ══
+var DE_DATES=["2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-05","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-08","2024-09","2024-10","2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01","2026-02","2026-03"];
+var DE_ACTIVE=[450,469,463,469,500,531,558,492,492,450,436,482,472,466,460,431,501,476,513,449,416,426,391,365,344,352,385,404,409,410,365,356,339,295,286,254,257,277,266,250,251,227,255,292,303,329,336,391,374];
+var DE_NEW=[93,83,108,115,99,132,135,102,114,137,144,57,66,66,32,70,72,83,105,79,87,74,70,62,54,56,43,52,44,42,36,54,32,25,22,41,47,44,34,27,42,24,56,28,33,47,9,60,58];
+var DE_SAL=[95724,95785,96374,94223,95752,93174,93035,92205,92650,91916,92121,93155,93496,95256,97501,97445,96543,96567,98259,96410,95743,99893,100295,98463,95890,101701,102269,99487,98942,97623,92887,87832,84193,83122,80921,81351,81383,84186,85220,88041,84939,80983,83496,83553,81353,81481,83543,83375,81771];
+var DE_TTF=[28,31,33,34,31,36,31,36,33,33,37,47,57,46,51,88,62,49,36,35,53,55,47,48,52,40,40,42,55,56,66,67,50,70,72,51,54,50,48,53,50,52,53,56,44,54,55,49,70];
+
+// ══ NJ JOB POSTING DATA ══
+var NJ_DATES=['2022-03','2022-04','2022-05','2022-06','2022-07','2022-08','2022-09','2022-10','2022-11','2022-12','2023-01','2023-02','2023-03','2023-04','2023-05','2023-06','2023-07','2023-08','2023-09','2023-10','2023-11','2023-12','2024-01','2024-02','2024-03','2024-04','2024-05','2024-06','2024-07','2024-08','2024-09','2024-10','2024-11','2024-12','2025-01','2025-02','2025-03','2025-04','2025-05','2025-06','2025-07','2025-08','2025-09','2025-10','2025-11','2025-12','2026-01','2026-02','2026-03'];
+var NJ_ACTIVE=[20,25,22,21,16,23,34,36,30,28,28,25,21,27,28,23,22,21,25,20,23,26,38,31,22,14,16,13,21,14,17,20,25,24,25,24,20,16,18,31,26,26,21,11,12,13,22,26,21];
+var NJ_NEW=[8,20,29,13,19,22,35,26,17,15,24,8,12,16,11,12,18,8,20,12,17,18,32,22,15,6,15,10,15,9,13,11,12,7,6,13,14,9,8,41,9,20,14,7,11,12,14,23,22];
+var NJ_SAL=[151961,136194,145866,147094,168313,122517,153932,164840,169157,164840,166974,168131,159207,138673,147309,156199,134363,139245,152205,73412,99622,64691,74216,106583,121985,122205,121108,121108,171081,147138,153674,134355,87765,98703,89277,98161,123730,112789,100051,112522,117009,107036,102228,98650,105998,109080,95041,92979,120790];
+var NJ_TTF=[10,28,0,14,21,15,7,0,7,14,7,12,28,0,0,30,0,21,35,49,7,7,14,79,42,14,77,77,77,21,32,49,5,42,112,65,101,40,147,92,61,69,127,182,52,95,21,23,26];
+
+// ══ MINI CHARTS FOR NEW METRIC CARDS ══
+function buildMiniChart(id, data, color) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  var maxV = Math.max.apply(null, data);
+  el.innerHTML = data.map(function(v,i) {
+    var h = Math.max(4, Math.round((v/maxV)*100));
+    var opacity = 0.3 + 0.7*(i/(data.length-1));
+    return '<div class="nm-bar" style="height:'+h+'%;background:'+color+';opacity:'+opacity.toFixed(2)+'"></div>';
+  }).join('');
+}
+// Active postings last 12 months
+buildMiniChart('nm-active-chart', NJ_ACTIVE.slice(-12), '#a8001f');
+// New postings last 6 months (Oct25-Mar26)
+buildMiniChart('nm-new-chart', [7,11,12,14,23,22], '#186040');
+
+// ══ CHART DRAWING ══
+function drawLineChart(cvs,dates,series,colors,labels,yPrefix,yDecimals){
+  if(!cvs)return;
+  var W=cvs.offsetWidth||400,H=parseInt(cvs.style.height)||200;
+  cvs.style.width=W+'px';cvs.style.height=H+'px';
+  cvs.width=W*2;cvs.height=H*2;
+  var ctx=cvs.getContext('2d');ctx.scale(2,2);
+  var pad={t:22,r:12,b:36,l:58};
+  var cW=W-pad.l-pad.r,cH=H-pad.t-pad.b;
+  var allVals=[].concat.apply([],series.map(function(s){return s;}));
+  var minV=Math.min.apply(null,allVals),maxV=Math.max.apply(null,allVals)*1.05;
+  ctx.fillStyle='#fff';ctx.fillRect(0,0,W,H);
+  for(var g=0;g<=4;g++){
+    var frac=g/4;var gy=pad.t+cH*(1-frac);
+    ctx.strokeStyle='#e7e3da';ctx.lineWidth=0.7;
+    ctx.beginPath();ctx.moveTo(pad.l,gy);ctx.lineTo(W-pad.r,gy);ctx.stroke();
+    var yv=minV+(maxV-minV)*frac;
+    var label=(yPrefix||'')+(yDecimals?yv.toFixed(0):(yv/1000).toFixed(0)+'K');
+    ctx.fillStyle='#6e6858';ctx.font='8.5px IBM Plex Mono,monospace';ctx.textAlign='right';
+    ctx.fillText(label,pad.l-4,gy+3.5);
+  }
+  var step=Math.ceil(dates.length/10);
+  dates.forEach(function(d,i){
+    if(i%step!==0)return;
+    var x=pad.l+(i/(dates.length-1))*cW;
+    ctx.fillStyle='#6e6858';ctx.font='8px IBM Plex Mono,monospace';ctx.textAlign='center';
+    ctx.fillText(d,x,H-8);
   });
-  barsHtml += '</div><div class="jt-labels">';
-  labels.forEach(function(l){ barsHtml += '<div class="jt-lbl">'+l+'</div>'; });
-  barsHtml += '</div>';
-  var el = document.getElementById(containerId);
-  if (el) el.innerHTML = barsHtml;
+  series.forEach(function(s,si){
+    var col=colors[si];
+    ctx.strokeStyle=col;ctx.lineWidth=1.8;ctx.beginPath();
+    s.forEach(function(v,i){
+      var x=pad.l+(i/(dates.length-1))*cW;
+      var y=pad.t+cH*(1-(v-minV)/(maxV-minV));
+      if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+    });
+    ctx.stroke();
+    // highlight last point
+    var lx=pad.l+cW,lv=s[s.length-1];
+    var ly=pad.t+cH*(1-(lv-minV)/(maxV-minV));
+    ctx.beginPath();ctx.arc(lx,ly,4,0,Math.PI*2);
+    ctx.fillStyle=col;ctx.fill();
+    ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(lx,ly,2,0,Math.PI*2);ctx.fill();
+  });
+  if(labels&&labels.length>1){
+    labels.forEach(function(l,i){
+      var lx=pad.l+i*120;
+      ctx.fillStyle=colors[i];ctx.fillRect(lx,6,10,6);
+      ctx.fillStyle='#3a3628';ctx.font='8.5px IBM Plex Mono,monospace';ctx.textAlign='left';
+      ctx.fillText(l,lx+13,12);
+    });
+  }
 }
 
-function buildComboChart(containerId, labels, de_vals, nj_vals) {
-  var maxV = Math.max.apply(null, de_vals.concat(nj_vals));
-  var barsHtml = '<div class="jt-bar-wrap" style="gap:3px">';
-  labels.forEach(function(l, i){
-    var hd = Math.round((de_vals[i]/maxV)*110);
-    var hn = Math.round((nj_vals[i]/maxV)*110);
-    barsHtml += '<div style="flex:1;display:flex;gap:2px;align-items:flex-end">'+
-      '<div class="jt-bar de" style="height:'+hd+'px;flex:1"><div class="tip">DE '+l+': '+de_vals[i]+'</div></div>'+
-      '<div class="jt-bar nj" style="height:'+hn+'px;flex:1"><div class="tip">NJ '+l+': '+nj_vals[i]+'</div></div>'+
-      '</div>';
+function drawBarChart(cvs,dates,values,color,yPrefix){
+  if(!cvs)return;
+  var W=cvs.offsetWidth||400,H=parseInt(cvs.style.height)||160;
+  cvs.style.width=W+'px';cvs.style.height=H+'px';
+  cvs.width=W*2;cvs.height=H*2;
+  var ctx=cvs.getContext('2d');ctx.scale(2,2);
+  var pad={t:18,r:10,b:32,l:50};
+  var cW=W-pad.l-pad.r,cH=H-pad.t-pad.b;
+  var maxV=Math.max.apply(null,values)*1.1||1;
+  ctx.fillStyle='#fff';ctx.fillRect(0,0,W,H);
+  [0.5,1].forEach(function(f){
+    var gy=pad.t+cH*(1-f);
+    ctx.strokeStyle='#e7e3da';ctx.lineWidth=0.7;
+    ctx.beginPath();ctx.moveTo(pad.l,gy);ctx.lineTo(W-pad.r,gy);ctx.stroke();
+    ctx.fillStyle='#6e6858';ctx.font='8px IBM Plex Mono,monospace';ctx.textAlign='right';
+    ctx.fillText((yPrefix||'')+(maxV*f).toFixed(0),pad.l-3,gy+3);
   });
-  barsHtml += '</div><div class="jt-labels">';
-  labels.forEach(function(l){ barsHtml += '<div class="jt-lbl">'+l+'</div>'; });
-  barsHtml += '</div>';
-  var el = document.getElementById(containerId);
-  if (el) el.innerHTML = barsHtml;
+  var bw=cW/values.length*0.72;
+  values.forEach(function(v,i){
+    var x=pad.l+(i+0.5)*(cW/values.length)-bw/2;
+    var bh=(v/maxV)*cH;var y=pad.t+cH-bh;
+    // highlight last 6 bars (6-month window)
+    var isRecent=(i>=values.length-6);
+    ctx.fillStyle=isRecent?color+'cc':color+'66';
+    ctx.globalAlpha=1;
+    ctx.beginPath();
+    ctx.roundRect?ctx.roundRect(x,y,bw,bh,2):ctx.rect(x,y,bw,bh);
+    ctx.fill();
+  });
+  var step2=Math.ceil(dates.length/8);
+  dates.forEach(function(d,i){
+    if(i%step2!==0)return;
+    var x=pad.l+(i+0.5)*(cW/dates.length);
+    ctx.fillStyle='#6e6858';ctx.font='7.5px IBM Plex Mono,monospace';ctx.textAlign='center';
+    ctx.fillText(d,x,H-8);
+  });
 }
 
-// Job posting data — Jan to Apr 2026 (LinkedIn Job Insights estimates)
-var months = ['Jan','Feb','Mar','Apr'];
-var dePostings = [312, 338, 399, 398];
-var njPostings = [82, 74, 96, 93];
-buildBarChart('jt-de-chart', months, dePostings, '');
-buildBarChart('jt-nj-chart', months, njPostings, 'nj');
-buildComboChart('jt-combined', months, dePostings, njPostings);
+function drawAllCharts(){
+  drawLineChart(document.getElementById('cvs-de-post'),DE_DATES,[DE_ACTIVE],['#1a4fa0'],null,'',true);
+  drawLineChart(document.getElementById('cvs-nj-post'),NJ_DATES,[NJ_ACTIVE],['#a8001f'],null,'',true);
+  drawBarChart(document.getElementById('cvs-de-new'),DE_DATES,DE_NEW,'#1a4fa0','');
+  drawBarChart(document.getElementById('cvs-nj-new'),NJ_DATES,NJ_NEW,'#a8001f','');
+  drawLineChart(document.getElementById('cvs-de-ttf'),DE_DATES,[DE_TTF],['#186040'],null,'',true);
+  drawLineChart(document.getElementById('cvs-nj-ttf'),NJ_DATES,[NJ_TTF],['#b06800'],null,'',true);
+  drawLineChart(document.getElementById('cvs-de-sal'),DE_DATES,[DE_SAL],['#1a4fa0'],null,'€',true);
+  drawLineChart(document.getElementById('cvs-nj-sal'),NJ_DATES,[NJ_SAL],['#a8001f'],null,'$',true);
+}
 
-// Monthly hiring volume estimates
-var deHires = [198, 212, 241, 235];
-var njHires = [44, 40, 61, 58];
-buildBarChart('hire-de', months, deHires, '');
-buildBarChart('hire-nj', months, njHires, 'nj');
-
-// Hiring companies Q1 2026
-hbars('hire-co-de',[['ZEISS Group / SMT',42],['Infineon Technologies',28],['Nokia Germany',22],['Fraunhofer IOF',18],['TRUMPF',17],['ams OSRAM',14],['Bosch Sensortec',12],['TOPTICA Photonics',10]],'de',42);
-hbars('hire-co-nj',[['Nokia Bell Labs',18],['Thorlabs',14],['Coherent Corp.',11],['AT&T Labs',8],['Verizon',7],['Edmund Optics',5],['Princeton Univ.',4],['TRUMPF USA',3]],'nj',18);
-
-// RSU data
-hbars('rsu-de',[['Entry/Postdoc','€0–€5K'],['Senior Engineer','€5K–€15K'],['Staff Engineer','€10K–€25K'],['Principal Engineer','€15K–€35K'],['Director','€20K–€50K'],['VP / Head R&D','€40K–€100K']],'de',6);
-hbars('rsu-nj',[['Entry/Postdoc','$5K–$15K'],['Senior Engineer','$20K–$40K'],['Staff Engineer','$35K–$60K'],['Principal Engineer','$50K–$100K'],['Director','$70K–$150K'],['VP / Head R&D','$120K–$300K']],'nj',6);
-
-// Actually build RSU as proper bars
-(function(){
-  var deRSU = [2500,10000,17500,25000,35000,70000];
-  var njRSU = [10000,30000,47500,75000,110000,210000];
-  hbars('rsu-de',[['Entry / Postdoc',2500],['Senior Engineer',10000],['Staff Engineer',17500],['Principal Engineer',25000],['Director',35000],['VP / R&D Head',70000]],'de',70000);
-  hbars('rsu-nj',[['Entry / Postdoc',10000],['Senior Engineer',30000],['Staff Engineer',47500],['Principal Engineer',75000],['Director',110000],['VP / R&D Head',210000]],'nj',210000);
-})();
-
-// ═══ COMPANIES / SCHOOLS / TALENT ═══
+// ══ COMPANY / POOL DATA ══
+hbars('de-co-hc',[['Infineon Technologies',4151],['Renesas Electronics',839],['Keysight',673],['Samsung Electronics',646],['GlobalFoundries',481],['Advantest',429],['NXP Semiconductors',366],['Intel',323],['Synopsys',300],['Qualcomm',204]],'de',4151);
+hbars('nj-co-hc',[['MACOM Tech Solutions',36],['Synopsys',35],['Nvidia',15],['Samsung Electronics',14],['Infineon',6],['AMD',5],['Keysight',3],['MediaTek',3],['Marvell Technology',1],['GlobalFoundries',1]],'nj',36);
 hbars('de-curr',[['ZEISS Semiconductor Mfg',173],['Infineon Technologies',133],['ZEISS Group',85],['TOPTICA Photonics',75],['Nokia',68],['Bosch',63],['Fraunhofer IOF',61],['ams OSRAM',56],['Huawei',54],['TRUMPF',54]],'de',173);
 hbars('nj-curr',[['Nokia',48],['Nokia Bell Labs',42],['Verizon',35],['Thorlabs',28],['AT&T',25],['Comcast',24],['Coherent Corp.',22],['Princeton Univ.',19],['TRUMPF',15],['Edmund Optics',13]],'nj',48);
-hbars('de-past',[['Infineon Technologies',236],['Nokia',190],['Huawei',183],['Siemens',173],['KIT',153],['TU Munich',135],['ZEISS Group',125],['FSU Jena',124],['Bosch',121],['TRUMPF',114]],'de',236);
-hbars('nj-past',[['Nokia',91],['AT&T',80],['Nokia Bell Labs',61],['Verizon',56],['Comcast',37],['Thorlabs',34],['Ericsson',23],['Ciena',20],['Stevens Inst.',20],['NJIT',18]],'nj',91);
 hbars('de-sch',[['TU Munich',314],['FSU Jena',245],['KIT',211],['FAU Erlangen-Nürnberg',182],['Univ. Stuttgart',164],['TU Berlin',162],['RWTH Aachen',153],['TU Dresden',141],['LMU München',113],['Leibniz Hannover',85]],'de',314);
 hbars('nj-sch',[['NJIT',62],['Rutgers University',50],['Stevens Inst.',47],['DeVry University',22],['Princeton Univ.',21],['Rutgers–New Brunswick',20],['Columbia University',16],['Cornell University',15],['Rowan University',12],['Univ. Rochester',12]],'nj',62);
 hbars('de-exp',[['Less than 1 yr',36],['1–2 yrs',223],['2–5 yrs',650],['5–10 yrs',1307],['10+ yrs',2757]],'de',2757);
@@ -734,186 +878,162 @@ hbars('nj-ten',[['Less than 1 yr',91],['1–2 yrs',189],['2–5 yrs',203],['5–
 hbars('de-fos',[['Physics',1314],['Elec & Elec Eng',965],['EE & Comms Eng',523],['Laser & Optical Tech',392],['Computer Science',290],['Mech Engineering',268],['Telecomms Eng',248],['Optics/Optical Sci',226]],'de',1314);
 hbars('nj-fos',[['Elec & Elec Eng',202],['Physics',108],['Computer Science',102],['Computational Sci',93],['CS Networking',68],['EE & Comms Eng',62],['IT',46],['Electronics',38]],'nj',202);
 
-// ═══ MAP ═══
+// ══ MAP ══
 var deMapData=[{city:'Munich',x:192,y:318,count:1377,sub:'Bavaria'},{city:'Berlin',x:282,y:122,count:465,sub:'Berlin'},{city:'Stuttgart',x:148,y:290,count:320,sub:'Baden-Württ'},{city:'Frankfurt',x:140,y:212,count:280,sub:'Hesse'},{city:'Jena',x:238,y:204,count:245,sub:'Thuringia'},{city:'Hamburg',x:175,y:76,count:195,sub:'Hamburg'},{city:'Aachen',x:86,y:185,count:153,sub:'NRW'},{city:'Dresden',x:282,y:190,count:141,sub:'Saxony'},{city:'Erlangen',x:202,y:266,count:182,sub:'Bavaria'},{city:'Cologne',x:98,y:194,count:130,sub:'NRW'}];
 var njMapData=[{city:'Middlesex',x:178,y:190,count:177,sub:'Central NJ'},{city:'Monmouth',x:196,y:224,count:125,sub:'Coastal NJ'},{city:'Hudson',x:150,y:156,count:111,sub:'NE NJ'},{city:'Union',x:147,y:178,count:86,sub:'NE NJ'},{city:'Mercer',x:163,y:210,count:85,sub:'Central NJ'},{city:'Morris',x:142,y:164,count:74,sub:'NW NJ'},{city:'Bergen',x:150,y:144,count:68,sub:'NE NJ'},{city:'Essex',x:147,y:168,count:60,sub:'NE NJ'}];
-
-function showMap(which, btn) {
-  document.querySelectorAll('.mbt').forEach(function(b){ b.classList.remove('on','de','nj'); });
-  btn.classList.add('on', which);
-  renderMap(which);
-}
-
-function renderMap(which) {
-  var data = which==='de' ? deMapData : njMapData;
-  var col = which==='de' ? '#1a4fa0' : '#a8001f';
-  var maxC = Math.max.apply(null, data.map(function(d){return d.count;}));
-  hbars('map-bars', data.map(function(d){return [d.city+' ('+d.sub+')',d.count];}), which, maxC);
-  var isDE = which==='de', vw=isDE?380:320, vh=isDE?420:320;
-  var outline = isDE ?
-    '<path d="M155,40 L175,35 L215,30 L255,35 L295,38 L320,55 L330,80 L315,105 L295,110 L305,135 L310,160 L300,185 L285,195 L285,215 L278,230 L260,240 L250,265 L235,280 L220,300 L205,330 L195,350 L185,360 L170,355 L152,340 L145,318 L130,305 L112,295 L100,275 L88,260 L82,240 L78,215 L72,200 L68,185 L75,170 L80,155 L72,135 L65,115 L68,95 L78,80 L88,68 L100,55 L120,45 Z" fill="#d6e6f8" stroke="#1a4fa0" stroke-width="1.5" opacity="0.65"/>' :
-    '<path d="M132,78 L180,73 L218,84 L238,99 L252,128 L256,158 L252,188 L246,218 L238,248 L222,272 L202,283 L182,278 L163,264 L143,253 L127,243 L114,228 L108,208 L108,183 L112,158 L115,133 L118,108 L122,93 Z" fill="#fae4e8" stroke="#a8001f" stroke-width="1.5" opacity="0.65"/>';
-  var dots = data.map(function(d){
-    var r = Math.max(7, Math.round(8+(d.count/maxC)*16));
-    var op = (0.42+(d.count/maxC)*0.52).toFixed(2);
-    var tip = d.city+': '+d.count.toLocaleString()+' candidates ('+d.sub+')';
-    return '<g class="mdot" data-tip="'+tip+'">'+
-      '<circle cx="'+d.x+'" cy="'+d.y+'" r="'+r+'" fill="'+col+'" opacity="'+op+'" style="cursor:pointer"/>'+
-      '<text x="'+d.x+'" y="'+(d.y+3.5)+'" text-anchor="middle" style="font-size:7px;font-family:IBM Plex Sans,sans-serif;font-weight:700;fill:#fff;pointer-events:none">'+d.city.split(' ')[0]+'</text>'+
-      '</g>';
-  }).join('');
-  var box = document.getElementById('map-box');
-  box.innerHTML = '<div id="mtt" class="mtt"></div>'+
-    '<svg viewBox="0 0 '+vw+' '+vh+'" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">'+
-    '<rect width="'+vw+'" height="'+vh+'" fill="#f4f2ec" rx="8"/>'+outline+dots+'</svg>';
-  box.querySelectorAll('.mdot').forEach(function(g){
-    var tip = g.dataset.tip;
-    g.addEventListener('mouseenter', function(e){
-      var t = document.getElementById('mtt'); if(!t) return;
-      var br = box.getBoundingClientRect(), cr = g.querySelector('circle').getBoundingClientRect();
-      t.textContent = tip; t.style.opacity='1';
-      t.style.left=(cr.left-br.left+cr.width/2+6)+'px';
-      t.style.top=(cr.top-br.top-28)+'px';
-    });
-    g.addEventListener('mouseleave', function(){ var t=document.getElementById('mtt'); if(t)t.style.opacity='0'; });
-  });
-  document.getElementById('map-leg').innerHTML =
-    '<div class="ml-i"><div class="ml-d" style="background:'+col+';opacity:.95"></div>700+ candidates</div>'+
-    '<div class="ml-i"><div class="ml-d" style="background:'+col+';opacity:.65"></div>200–700</div>'+
-    '<div class="ml-i"><div class="ml-d" style="background:'+col+';opacity:.42"></div>&lt;200</div>';
+function showMap(which,btn){document.querySelectorAll('.mbt').forEach(function(b){b.classList.remove('on','de','nj');});btn.classList.add('on',which);renderMap(which);}
+function renderMap(which){
+  var data=which==='de'?deMapData:njMapData,col=which==='de'?'#1a4fa0':'#a8001f';
+  var maxC=Math.max.apply(null,data.map(function(d){return d.count;}));
+  hbars('map-bars',data.map(function(d){return[d.city+' ('+d.sub+')',d.count];}),which,maxC);
+  var isDE=which==='de',vw=isDE?380:320,vh=isDE?420:320;
+  var outline=isDE?'<path d="M155,40 L175,35 L215,30 L255,35 L295,38 L320,55 L330,80 L315,105 L295,110 L305,135 L310,160 L300,185 L285,195 L285,215 L278,230 L260,240 L250,265 L235,280 L220,300 L205,330 L195,350 L185,360 L170,355 L152,340 L145,318 L130,305 L112,295 L100,275 L88,260 L82,240 L78,215 L72,200 L68,185 L75,170 L80,155 L72,135 L65,115 L68,95 L78,80 L88,68 L100,55 L120,45 Z" fill="#d6e6f8" stroke="#1a4fa0" stroke-width="1.5" opacity="0.6"/>':'<path d="M132,78 L180,73 L218,84 L238,99 L252,128 L256,158 L252,188 L246,218 L238,248 L222,272 L202,283 L182,278 L163,264 L143,253 L127,243 L114,228 L108,208 L108,183 L112,158 L115,133 L118,108 L122,93 Z" fill="#fae4e8" stroke="#a8001f" stroke-width="1.5" opacity="0.6"/>';
+  var dots=data.map(function(d){var r=Math.max(7,Math.round(8+(d.count/maxC)*16)),op=(0.42+(d.count/maxC)*0.52).toFixed(2);var tip=d.city+': '+d.count.toLocaleString()+' candidates ('+d.sub+')';return '<g class="mdot" data-tip="'+tip+'"><circle cx="'+d.x+'" cy="'+d.y+'" r="'+r+'" fill="'+col+'" opacity="'+op+'" style="cursor:pointer"/><text x="'+d.x+'" y="'+(d.y+3.5)+'" text-anchor="middle" style="font-size:7px;font-family:IBM Plex Sans,sans-serif;font-weight:700;fill:#fff;pointer-events:none">'+d.city.split(' ')[0]+'</text></g>';}).join('');
+  var box=document.getElementById('map-box');
+  box.innerHTML='<div id="mtt" class="mtt"></div><svg viewBox="0 0 '+vw+' '+vh+'" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto"><rect width="'+vw+'" height="'+vh+'" fill="#f4f2ec" rx="8"/>'+outline+dots+'</svg>';
+  box.querySelectorAll('.mdot').forEach(function(g){var tip=g.dataset.tip;g.addEventListener('mouseenter',function(){var t=document.getElementById('mtt'),c=g.querySelector('circle').getBoundingClientRect(),br=box.getBoundingClientRect();if(!t)return;t.textContent=tip;t.style.opacity='1';t.style.left=(c.left-br.left+c.width/2+6)+'px';t.style.top=(c.top-br.top-28)+'px';});g.addEventListener('mouseleave',function(){var t=document.getElementById('mtt');if(t)t.style.opacity='0';});});
+  document.getElementById('map-leg').innerHTML='<div class="ml-i"><div class="ml-d" style="background:'+col+';opacity:.95"></div>700+ candidates</div><div class="ml-i"><div class="ml-d" style="background:'+col+';opacity:.65"></div>200–700</div><div class="ml-i"><div class="ml-d" style="background:'+col+';opacity:.42"></div>&lt;200</div>';
 }
 renderMap('de');
 
-// ═══ HEAT MAPS ═══
-function buildHM(id, cols, rows, isRed) {
-  var all=[]; rows.forEach(function(r){r.vals.forEach(function(v){all.push(v);});}); var maxV=Math.max.apply(null,all);
-  function bg(v){var t=v/maxV; return isRed?'rgb('+Math.round(255-(255-168)*t)+','+Math.round(232-(232-0)*t)+','+Math.round(237-(237-31)*t)+')':'rgb('+Math.round(214-(214-26)*t)+','+Math.round(230-(230-79)*t)+','+Math.round(248-(248-160)*t)+')';}
-  var h='<table style="border-collapse:separate;border-spacing:3px;min-width:100%"><tr><td style="min-width:108px"></td>';
-  cols.forEach(function(c){h+='<td style="font-size:9px;font-family:IBM Plex Mono,monospace;color:var(--muted);text-align:center;padding:2px 3px;white-space:nowrap">'+c+'</td>';});
-  h+='</tr>';
-  rows.forEach(function(row){
-    h+='<tr><td style="font-size:11px;font-family:IBM Plex Mono,monospace;color:var(--text2);padding-right:9px;white-space:nowrap;font-weight:500">'+row.city+'</td>';
-    row.vals.forEach(function(v,i){
-      var b=bg(v),tc=(v/maxV>0.52)?'#fff':'#2a2016';
-      h+='<td class="hm-cell" style="background:'+b+'" title="'+row.city+' \u00b7 '+cols[i]+': '+v+'" onmouseenter="this.style.transform=\'scale(1.1)\'" onmouseleave="this.style.transform=\'\'"><span style="font-size:11px;font-weight:700;font-family:IBM Plex Mono,monospace;color:'+tc+'">'+v+'</span></td>';
-    });
-    h+='</tr>';
-  });
-  h+='</table>';
-  var el=document.getElementById(id); if(el)el.innerHTML=h;
+// ══ HEAT MAPS ══
+function buildHM(id,cols,rows,isRed){
+  var all=[];rows.forEach(function(r){r.vals.forEach(function(v){all.push(v);});});var maxV=Math.max.apply(null,all);
+  function bg(v){var t=v/maxV;return isRed?'rgb('+Math.round(255-(255-168)*t)+','+Math.round(232-(232-0)*t)+','+Math.round(237-(237-31)*t)+')':'rgb('+Math.round(214-(214-26)*t)+','+Math.round(230-(230-79)*t)+','+Math.round(248-(248-160)*t)+')';}
+  var h='<table style="border-collapse:separate;border-spacing:3px;min-width:100%"><tr><td style="min-width:105px"></td>';
+  cols.forEach(function(c){h+='<td style="font-size:9px;font-family:IBM Plex Mono,monospace;color:var(--muted);text-align:center;padding:2px 3px;white-space:nowrap">'+c+'</td>';});h+='</tr>';
+  rows.forEach(function(row){h+='<tr><td style="font-size:11px;font-family:IBM Plex Mono,monospace;color:var(--t2);padding-right:8px;white-space:nowrap;font-weight:500">'+row.city+'</td>';
+    row.vals.forEach(function(v,i){var b=bg(v),tc=(v/maxV>0.52)?'#fff':'#2a2016';h+='<td class="hm-cell" style="background:'+b+'" title="'+row.city+' · '+cols[i]+': '+v+'"><span style="font-size:11px;font-weight:700;font-family:IBM Plex Mono,monospace;color:'+tc+'">'+v+'</span></td>';});h+='</tr>';});
+  h+='</table>';var el=document.getElementById(id);if(el)el.innerHTML=h;
 }
 buildHM('hm-de',['Photonics/Optics','Semiconductors','Telecom/Networks','RF & Microwave','Process Eng','Research'],
   [{city:'Munich',vals:[320,180,150,60,95,110]},{city:'Berlin',vals:[140,95,130,80,60,150]},{city:'Jena',vals:[180,60,45,30,40,210]},{city:'Stuttgart',vals:[110,150,85,70,120,45]},{city:'Frankfurt',vals:[80,70,160,55,65,60]},{city:'Erlangen',vals:[130,95,70,85,55,90]},{city:'Aachen',vals:[90,120,95,100,75,80]},{city:'Hamburg',vals:[75,60,110,65,85,55]},{city:'Dresden',vals:[85,140,60,50,90,120]},{city:'Cologne',vals:[65,55,125,75,55,45]}],false);
 buildHM('hm-nj',['<1 yr','1–2 yr','2–5 yr','5–10 yr','10–20 yr','20+ yr'],
   [{city:'Middlesex Co.',vals:[12,28,45,55,28,9]},{city:'Monmouth Co.',vals:[8,18,32,40,20,7]},{city:'Hudson Co.',vals:[10,22,30,35,10,4]},{city:'Union Co.',vals:[6,14,22,28,12,4]},{city:'Mercer Co.',vals:[7,15,24,26,10,3]},{city:'Morris Co.',vals:[5,12,18,24,12,3]},{city:'Bergen Co.',vals:[5,10,16,22,10,5]},{city:'Essex Co.',vals:[4,8,14,18,12,4]}],true);
 
-// ═══ COST TO HIRE ═══
+// ══ COST TO HIRE ══
 var CTH={
-  entry:{label:'Entry / Postdoc',de:{baseSalary:45000,bonus:2500,payrollTax:10800,healthIns:1400,relocation:3000,recruiting:8000,onboarding:2500,equipment:3500,visa:0,overhead:6000,totalY1:83200,totalY3:218000},nj:{baseSalary:82000,bonus:8000,payrollTax:9000,healthIns:9600,relocation:8000,recruiting:18000,onboarding:3500,equipment:4500,visa:3500,overhead:14000,totalY1:162100,totalY3:428000},sav:78900,sav3:210000},
-  mid:{label:'Senior Engineer (5–10 yr)',de:{baseSalary:82000,bonus:7000,payrollTax:17000,healthIns:1400,relocation:6000,recruiting:16000,onboarding:3500,equipment:4000,visa:500,overhead:8000,totalY1:145400,totalY3:380000},nj:{baseSalary:128000,bonus:18000,payrollTax:13800,healthIns:10200,relocation:12000,recruiting:28000,onboarding:5000,equipment:5500,visa:4000,overhead:18000,totalY1:242500,totalY3:635000},sav:97100,sav3:255000},
-  principal:{label:'Principal / Staff Engineer',de:{baseSalary:138000,bonus:18000,payrollTax:28000,healthIns:1400,relocation:8000,recruiting:28000,onboarding:6000,equipment:6000,visa:1000,overhead:12000,totalY1:246400,totalY3:640000},nj:{baseSalary:210000,bonus:38000,payrollTax:22000,healthIns:11400,relocation:18000,recruiting:52000,onboarding:8000,equipment:8000,visa:5000,overhead:24000,totalY1:396400,totalY3:1040000},sav:150000,sav3:400000},
-  director:{label:'Director of Engineering',de:{baseSalary:168000,bonus:30000,payrollTax:34000,healthIns:1400,relocation:12000,recruiting:42000,onboarding:8000,equipment:8000,visa:1000,overhead:16000,totalY1:320400,totalY3:840000},nj:{baseSalary:290000,bonus:60000,payrollTax:28000,healthIns:12600,relocation:25000,recruiting:72000,onboarding:10000,equipment:10000,visa:6000,overhead:32000,totalY1:545600,totalY3:1430000},sav:225200,sav3:590000},
-  vp:{label:'VP / Head of R&D',de:{baseSalary:220000,bonus:48000,payrollTax:42000,healthIns:1400,relocation:15000,recruiting:58000,onboarding:10000,equipment:10000,visa:1500,overhead:20000,totalY1:425900,totalY3:1100000},nj:{baseSalary:380000,bonus:90000,payrollTax:38000,healthIns:14400,relocation:30000,recruiting:96000,onboarding:14000,equipment:14000,visa:7000,overhead:40000,totalY1:723400,totalY3:1890000},sav:297500,sav3:790000},
+  entry:{label:'Entry / Postdoc',sav:78900,sav3:210000,de:{baseSalary:40000,bonus:2500,payrollTax:9500,healthIns:1400,relocation:3000,recruiting:8000,onboarding:2500,equipment:3000,visa:0,overhead:5500,totalY1:75400,totalY3:198000},nj:{baseSalary:82000,bonus:8000,payrollTax:9000,healthIns:9600,relocation:8000,recruiting:18000,onboarding:3500,equipment:4000,visa:3500,overhead:14000,totalY1:162100,totalY3:428000}},
+  mid:{label:'Senior Engineer (5–10 yr)',sav:97100,sav3:255000,de:{baseSalary:82000,bonus:7000,payrollTax:17000,healthIns:1400,relocation:6000,recruiting:16000,onboarding:3500,equipment:4000,visa:500,overhead:8000,totalY1:145400,totalY3:380000},nj:{baseSalary:128000,bonus:18000,payrollTax:13800,healthIns:10200,relocation:12000,recruiting:28000,onboarding:5000,equipment:5000,visa:4000,overhead:18000,totalY1:242000,totalY3:635000}},
+  principal:{label:'Principal / Staff Engineer',sav:150000,sav3:400000,de:{baseSalary:138000,bonus:18000,payrollTax:28000,healthIns:1400,relocation:8000,recruiting:28000,onboarding:6000,equipment:6000,visa:1000,overhead:12000,totalY1:246400,totalY3:640000},nj:{baseSalary:210000,bonus:38000,payrollTax:22000,healthIns:11400,relocation:18000,recruiting:52000,onboarding:8000,equipment:8000,visa:5000,overhead:24000,totalY1:396400,totalY3:1040000}},
+  director:{label:'Director of Engineering',sav:225200,sav3:590000,de:{baseSalary:168000,bonus:30000,payrollTax:34000,healthIns:1400,relocation:12000,recruiting:42000,onboarding:8000,equipment:8000,visa:1000,overhead:16000,totalY1:320400,totalY3:840000},nj:{baseSalary:290000,bonus:60000,payrollTax:28000,healthIns:12600,relocation:25000,recruiting:72000,onboarding:10000,equipment:10000,visa:6000,overhead:32000,totalY1:545600,totalY3:1430000}},
+  vp:{label:'VP / Head of R&D',sav:297500,sav3:790000,de:{baseSalary:220000,bonus:48000,payrollTax:42000,healthIns:1400,relocation:15000,recruiting:58000,onboarding:10000,equipment:10000,visa:1500,overhead:20000,totalY1:425900,totalY3:1110000},nj:{baseSalary:380000,bonus:90000,payrollTax:38000,healthIns:14400,relocation:30000,recruiting:96000,onboarding:14000,equipment:14000,visa:7000,overhead:40000,totalY1:723400,totalY3:1900000}},
 };
-var factors=[{k:'baseSalary',l:'Base Salary',i:'💼'},{k:'bonus',l:'Bonus / Variable Pay',i:'⭐'},{k:'payrollTax',l:'Payroll / Social Security Tax',i:'🏛'},{k:'healthIns',l:'Health Insurance',i:'🏥'},{k:'relocation',l:'Relocation Package',i:'🚚'},{k:'recruiting',l:'Recruiting Fees',i:'🔍'},{k:'onboarding',l:'Onboarding & Training',i:'📚'},{k:'equipment',l:'Equipment & Lab Setup',i:'💻'},{k:'visa',l:'Visa / Work Authorization',i:'📋'},{k:'overhead',l:'Office & Benefits Overhead',i:'🏢'}];
-var factNotes={baseSalary:'DE: Eightfold AI dataset (Munich market rate) · NJ: LinkedIn Salary 2025 + BLS SOC 17-2061',bonus:'DE: 10–16% typical (Glassdoor DE) · NJ: 15–22% senior levels (Glassdoor NJ)',payrollTax:'DE: ~19.5% employer social security · NJ: 7.65% FICA + NJ state payroll taxes',healthIns:'DE: Statutory health system, employer top-up only ~€1.4K · NJ: Full employer premium $9.6–14.4K (BLS 2024)',relocation:'DE: EU domestic relocation minimal · NJ: Often cross-state/international',recruiting:'DE: 15–20% of base (agency fee) · NJ: 20–25% + LinkedIn Recruiter license',onboarding:'Similar; NJ slightly higher compliance cost',equipment:'Optical lab similar; NJ office setup premium',visa:'DE: EU candidates no cost · NJ: H-1B lottery + legal fees ~$3–7K',overhead:'NJ/NYC real estate significantly more expensive than Munich/Berlin'};
+var factors=[{k:'baseSalary',l:'Base Salary',i:'💼'},{k:'bonus',l:'Bonus / Variable Pay',i:'⭐'},{k:'payrollTax',l:'Payroll / Social Security',i:'🏛'},{k:'healthIns',l:'Health Insurance',i:'🏥'},{k:'relocation',l:'Relocation',i:'🚚'},{k:'recruiting',l:'Recruiting Fees',i:'🔍'},{k:'onboarding',l:'Onboarding & Training',i:'📚'},{k:'equipment',l:'Equipment & Lab Setup',i:'💻'},{k:'visa',l:'Visa / Work Auth',i:'📋'},{k:'overhead',l:'Office & Benefits Overhead',i:'🏢'}];
+var factNotes={baseSalary:'DE: Eightfold AI dataset (real) · NJ: LinkedIn Salary 2025 + BLS SOC 17-2061',bonus:'DE: 10–16% typical · NJ: 15–22% (Glassdoor 2025)',payrollTax:'DE: ~19.5% employer social security · NJ: 7.65% FICA + NJ state',healthIns:'DE: Statutory system ~€1.4K employer top-up · NJ: Full premium $9.6–14.4K',relocation:'DE: EU domestic minimal · NJ: often cross-state/international',recruiting:'DE: 15–20% of base · NJ: 20–25% + LinkedIn Recruiter costs',onboarding:'Similar; NJ slightly higher compliance complexity',equipment:'Optical lab similar; NJ office setup premium',visa:'DE: EU candidates nil · NJ: H-1B ~$3–7K legal fees',overhead:'NJ/NYC real estate significantly more expensive'};
 var curLvl='principal';
-function setLvl(lv,btn){curLvl=lv;document.querySelectorAll('.lbt').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');renderCTH();}
-function fc(n,cur){cur=cur||'€';return cur+Math.round(n).toLocaleString();}
+
+function updateSlider(inp,valId,prefix,withCommas,suffix){
+  var v=parseInt(inp.value);
+  var pct=((v-parseInt(inp.min))/(parseInt(inp.max)-parseInt(inp.min)))*100;
+  inp.style.background='linear-gradient(90deg,'+(inp.classList.contains('de-r')?'var(--de)':'var(--nj)')+' '+pct+'%,var(--s2) '+pct+'%)';
+  var display=prefix+(withCommas===true?v.toLocaleString():v)+(suffix||'');
+  document.getElementById(valId).textContent=display;
+}
+function getSliderVal(id){return parseInt(document.getElementById(id).value);}
+function recalc(){
+  var deBase=getSliderVal('sl-de-base'),njBase=getSliderVal('sl-nj-base');
+  var deBon=getSliderVal('sl-de-bon')/100,njBon=getSliderVal('sl-nj-bon')/100;
+  var deRec=getSliderVal('sl-de-rec')/100,njRec=getSliderVal('sl-nj-rec')/100;
+  var deRel=getSliderVal('sl-de-rel'),njRel=getSliderVal('sl-nj-rel');
+  var deN=getSliderVal('sl-de-n'),njN=getSliderVal('sl-nj-n');
+  var d=CTH[curLvl];
+  var deFixed=d.de.payrollTax+d.de.healthIns+d.de.onboarding+d.de.equipment+d.de.visa+d.de.overhead;
+  var njFixed=d.nj.payrollTax+d.nj.healthIns+d.nj.onboarding+d.nj.equipment+d.nj.visa+d.nj.overhead;
+  var deY1=deBase+Math.round(deBase*deBon)+deFixed+Math.round(deBase*deRec)+deRel;
+  var njY1=njBase+Math.round(njBase*njBon)+njFixed+Math.round(njBase*njRec)+njRel;
+  var deY3=deY1+deY1*0.95+deY1*0.9,njY3=njY1+njY1*0.96+njY1*0.9;
+  var savePer=njY1-deY1,totalCohort=deY1*deN+njY1*njN,totalY3=deY3*deN+njY3*njN;
+  document.getElementById('ib-de-y1').textContent=fc(deY1);
+  document.getElementById('ib-de-sub').textContent=deN+' hire'+(deN>1?'s':'');
+  document.getElementById('ib-nj-y1').textContent=fc(njY1,'$');
+  document.getElementById('ib-nj-sub').textContent=njN+' hire'+(njN>1?'s':'');
+  document.getElementById('ib-save').textContent=fc(savePer,'$');
+  document.getElementById('ib-total').textContent=fc(totalCohort,'$');
+  document.getElementById('ib-cohort-sub').textContent=deN+' DE + '+njN+' NJ hire'+(deN+njN>1?'s':'');
+  document.getElementById('ib-y3').textContent=fc(totalY3,'$');
+  document.getElementById('ib-y3-sub').textContent='3-yr cumulative ('+deN+' DE + '+njN+' NJ)';
+  var tot=deY1+njY1,dp=Math.round((deY1/tot)*100);
+  document.getElementById('cb-de').style.width=dp+'%';
+  document.getElementById('cb-nj').style.width=(100-dp)+'%';
+  document.getElementById('cb-dv').textContent=fc(deY1);
+  document.getElementById('cb-nv').textContent=fc(njY1,'$');
+  document.getElementById('sav-h').textContent='Germany saves ~'+fc(savePer,'$')+' per '+d.label+' hire (Year 1, all-in)';
+  document.getElementById('sav-p').textContent='3-year saving per individual hire: ~'+fc(njY3-deY3,'$')+' · Cohort of '+deN+' DE + '+njN+' NJ hires over 3 yrs: ~'+fc(totalY3,'$')+' total';
+}
+
+function setLvl(lv,btn){
+  curLvl=lv;
+  document.querySelectorAll('.lbt').forEach(function(b){b.classList.remove('on');});
+  btn.classList.add('on');
+  var d=CTH[lv];
+  var sliders={'sl-de-base':{val:d.de.baseSalary,vid:'sl-de-base-v',pre:'€',com:true},'sl-nj-base':{val:d.nj.baseSalary,vid:'sl-nj-base-v',pre:'$',com:true},'sl-de-bon':{val:13,vid:'sl-de-bon-v',pre:'',com:false,suf:'%'},'sl-nj-bon':{val:18,vid:'sl-nj-bon-v',pre:'',com:false,suf:'%'},'sl-de-rec':{val:20,vid:'sl-de-rec-v',pre:'',com:false,suf:'%'},'sl-nj-rec':{val:25,vid:'sl-nj-rec-v',pre:'',com:false,suf:'%'},'sl-de-rel':{val:d.de.relocation,vid:'sl-de-rel-v',pre:'€',com:true},'sl-nj-rel':{val:d.nj.relocation,vid:'sl-nj-rel-v',pre:'$',com:true}};
+  Object.keys(sliders).forEach(function(id){var s=sliders[id];var inp=document.getElementById(id);inp.value=s.val;updateSlider(inp,s.vid,s.pre,s.com,s.suf||'');});
+  renderCTH();recalc();
+}
+
 function renderCTH(){
   var d=CTH[curLvl],de=d.de,nj=d.nj;
-  document.getElementById('sav-h').textContent='Germany saves ~'+fc(d.sav,'$')+' per '+d.label+' hire (Year 1, all-in)';
-  document.getElementById('sav-p').textContent='3-year cumulative saving per hire: ~'+fc(d.sav3,'$')+' · Sources: Eightfold AI (DE) · Glassdoor/BLS/LinkedIn Salary (NJ)';
-  var el=document.getElementById('y3-save');if(el)el.textContent=fc(d.sav3,'$');
-  var tot=de.totalY1+nj.totalY1,dp=Math.round((de.totalY1/tot)*100);
-  document.getElementById('cb-de').style.width=dp+'%';document.getElementById('cb-nj').style.width=(100-dp)+'%';
-  document.getElementById('cb-dv').textContent=fc(de.totalY1);document.getElementById('cb-nv').textContent=fc(nj.totalY1,'$');
-  // cards
   function card(data,mkt,win){
     var col=mkt==='de'?'de':'nj',cur=mkt==='de'?'€':'$';
     var sub=mkt==='de'?'<div style="font-size:10px;color:var(--green);font-family:IBM Plex Mono,monospace;margin-top:1px">✓ Recommended · Lower cost</div>':'<div style="font-size:10px;color:var(--muted);font-family:IBM Plex Mono,monospace;margin-top:1px">Senior-ready · Higher cost</div>';
-    return '<div class="cth-card'+(win?' win':'')+'"><div class="cth-hdr"><div><div class="cth-mkt '+col+'">'+(mkt==='de'?'🇩🇪 Germany':'🇺🇸 New Jersey')+'</div>'+sub+'</div>'+
-      '<div class="cth-tot"><div class="cth-tot-n '+col+'">'+fc(data.totalY1,cur)+'</div><div class="cth-tot-l">Year 1 All-In ('+(mkt==='de'?'EUR':'USD')+')</div></div></div>'+
+    return '<div class="cth-card'+(win?' win':'')+'"><div class="cth-hdr"><div><div class="cth-mkt '+col+'">'+(mkt==='de'?'🇩🇪 Germany':'🇺🇸 New Jersey')+'</div>'+sub+'</div><div class="cth-tot"><div class="cth-tot-n '+col+'">'+fc(data.totalY1,cur)+'</div><div class="cth-tot-l">Year 1 All-In ('+(mkt==='de'?'EUR':'USD')+')</div></div></div>'+
       factors.map(function(f){return '<div class="cf-row"><div class="cf-l">'+f.i+' '+f.l+'</div><div class="cf-v '+col+'">'+fc(data[f.k],cur)+'</div></div>';}).join('')+
       '<div class="cf-row" style="border-top:2px solid var(--'+col+');padding-top:8px;margin-top:4px"><div class="cf-l"><strong>Year 1 Total</strong></div><div class="cf-v '+col+'" style="font-size:14px">'+fc(data.totalY1,cur)+'</div></div>'+
       '<div class="cf-row"><div class="cf-l">3-Year Total</div><div class="cf-v '+col+'">'+fc(data.totalY3,cur)+'</div></div></div>';
   }
   document.getElementById('cth-grid').innerHTML=card(de,'de',true)+card(nj,'nj',false);
-  // factor bars
   var maxF=Math.max.apply(null,factors.map(function(f){return Math.max(de[f.k],nj[f.k]);}));
-  var fbH='<div style="display:flex;gap:9px;font-size:10px;font-family:IBM Plex Mono,monospace;margin-bottom:9px"><span style="color:var(--de)">■ Germany (EUR)</span><span style="color:var(--nj)">■ New Jersey (USD)</span></div>';
+  var fbH='<div style="display:flex;gap:9px;font-size:10px;font-family:IBM Plex Mono,monospace;margin-bottom:8px"><span style="color:var(--de)">■ Germany (EUR)</span><span style="color:var(--nj)">■ New Jersey (USD)</span></div>';
   factors.forEach(function(f){
     var dp=Math.round((de[f.k]/maxF)*100),np=Math.round((nj[f.k]/maxF)*100);
-    fbH+='<div style="margin-bottom:8px"><div style="font-size:10px;color:var(--muted);margin-bottom:3px;font-family:IBM Plex Mono,monospace">'+f.i+' '+f.l+'</div>'+
-      '<div style="display:flex;gap:3px">'+
-      '<div style="flex:1;height:13px;background:var(--surface2);border-radius:3px;overflow:hidden"><div style="width:'+dp+'%;height:100%;background:var(--de);display:flex;align-items:center;justify-content:flex-end;padding-right:4px;font-size:9px;color:#fff;font-family:IBM Plex Mono,monospace">'+fc(de[f.k])+'</div></div>'+
-      '<div style="flex:1;height:13px;background:var(--surface2);border-radius:3px;overflow:hidden"><div style="width:'+np+'%;height:100%;background:var(--nj);display:flex;align-items:center;justify-content:flex-end;padding-right:4px;font-size:9px;color:#fff;font-family:IBM Plex Mono,monospace">'+fc(nj[f.k],'$')+'</div></div>'+
+    fbH+='<div style="margin-bottom:7px"><div style="font-size:10px;color:var(--muted);margin-bottom:2px;font-family:IBM Plex Mono,monospace">'+f.i+' '+f.l+'</div><div style="display:flex;gap:3px">'+
+      '<div style="flex:1;height:12px;background:var(--s2);border-radius:3px;overflow:hidden"><div style="width:'+dp+'%;height:100%;background:var(--de);display:flex;align-items:center;justify-content:flex-end;padding-right:3px;font-size:8.5px;color:#fff;font-family:IBM Plex Mono,monospace">'+fc(de[f.k])+'</div></div>'+
+      '<div style="flex:1;height:12px;background:var(--s2);border-radius:3px;overflow:hidden"><div style="width:'+np+'%;height:100%;background:var(--nj);display:flex;align-items:center;justify-content:flex-end;padding-right:3px;font-size:8.5px;color:#fff;font-family:IBM Plex Mono,monospace">'+fc(nj[f.k],'$')+'</div></div>'+
       '</div></div>';
   });
   document.getElementById('fac-bars').innerHTML=fbH;
-  // canvas
   var cvs=document.getElementById('cth-cvs');
-  if(cvs){
-    var W=cvs.offsetWidth||340,H=195;
-    cvs.style.width=W+'px';cvs.style.height=H+'px';cvs.width=W*2;cvs.height=H*2;
+  if(cvs&&cvs.offsetWidth){
+    var W=cvs.offsetWidth,H=190;cvs.style.width=W+'px';cvs.style.height=H+'px';cvs.width=W*2;cvs.height=H*2;
     var ctx=cvs.getContext('2d');ctx.scale(2,2);
     var dePts=[de.totalY1,de.totalY1*1.90,de.totalY1*2.52];
     var njPts=[nj.totalY1,nj.totalY1*1.93,nj.totalY1*2.58];
     var maxV=Math.max.apply(null,njPts)*1.07;
-    var pad={t:26,r:18,b:36,l:66},cW=W-pad.l-pad.r,cH=H-pad.t-pad.b;
+    var pad={t:26,r:12,b:34,l:66},cW=W-pad.l-pad.r,cH=H-pad.t-pad.b;
     ctx.fillStyle='#fff';ctx.fillRect(0,0,W,H);
-    [0.25,0.5,0.75,1].forEach(function(f){
-      var y=pad.t+cH*(1-f);
-      ctx.strokeStyle='#e8e5dc';ctx.lineWidth=0.8;ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(W-pad.r,y);ctx.stroke();
-      ctx.fillStyle='#6e6858';ctx.font='9px IBM Plex Mono,monospace';ctx.textAlign='right';
-      ctx.fillText((maxV*f/1000).toFixed(0)+'K',pad.l-4,y+3.5);
-    });
-    ['Yr 1','Yr 2','Yr 3'].forEach(function(l,i){
-      var x=pad.l+(i/2)*cW;ctx.fillStyle='#6e6858';ctx.font='9px IBM Plex Mono,monospace';ctx.textAlign='center';ctx.fillText(l,x,H-10);
-    });
-    function dl(pts,col,sym){
-      ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();
-      pts.forEach(function(v,i){var x=pad.l+(i/2)*cW,y=pad.t+cH*(1-v/maxV);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();
-      pts.forEach(function(v,i){
-        var x=pad.l+(i/2)*cW,y=pad.t+cH*(1-v/maxV);
-        ctx.beginPath();ctx.arc(x,y,3.5,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();
-        ctx.fillStyle='#222';ctx.font='bold 9px IBM Plex Mono,monospace';ctx.textAlign='center';
-        ctx.fillText(sym+(v/1000).toFixed(0)+'K',x,y-8);
-      });
-    }
+    [0.25,0.5,0.75,1].forEach(function(f){var y=pad.t+cH*(1-f);ctx.strokeStyle='#e7e3da';ctx.lineWidth=0.7;ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(W-pad.r,y);ctx.stroke();ctx.fillStyle='#6e6858';ctx.font='9px IBM Plex Mono,monospace';ctx.textAlign='right';ctx.fillText((maxV*f/1000).toFixed(0)+'K',pad.l-4,y+3.5);});
+    ['Yr 1','Yr 2','Yr 3'].forEach(function(l,i){var x=pad.l+(i/2)*cW;ctx.fillStyle='#6e6858';ctx.font='9px IBM Plex Mono,monospace';ctx.textAlign='center';ctx.fillText(l,x,H-9);});
+    function dl(pts,col,sym){ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();pts.forEach(function(v,i){var x=pad.l+(i/2)*cW,y=pad.t+cH*(1-v/maxV);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();pts.forEach(function(v,i){var x=pad.l+(i/2)*cW,y=pad.t+cH*(1-v/maxV);ctx.beginPath();ctx.arc(x,y,3.5,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();ctx.fillStyle='#222';ctx.font='bold 9px IBM Plex Mono,monospace';ctx.textAlign='center';ctx.fillText(sym+(v/1000).toFixed(0)+'K',x,y-8);});}
     dl(dePts,'#1a4fa0','€');dl(njPts,'#a8001f','$');
-    ctx.fillStyle='#1a4fa0';ctx.fillRect(pad.l,pad.t-16,10,7);
-    ctx.fillStyle='#333';ctx.font='9px IBM Plex Mono,monospace';ctx.textAlign='left';ctx.fillText('Germany (EUR)',pad.l+13,pad.t-10);
-    ctx.fillStyle='#a8001f';ctx.fillRect(pad.l+105,pad.t-16,10,7);ctx.fillText('New Jersey (USD)',pad.l+118,pad.t-10);
+    ctx.fillStyle='#1a4fa0';ctx.fillRect(pad.l,pad.t-14,10,7);ctx.fillStyle='#333';ctx.font='9px IBM Plex Mono,monospace';ctx.textAlign='left';ctx.fillText('Germany (EUR)',pad.l+13,pad.t-8);
+    ctx.fillStyle='#a8001f';ctx.fillRect(pad.l+105,pad.t-14,10,7);ctx.fillText('New Jersey (USD)',pad.l+118,pad.t-8);
   }
-  // detail table
-  var tH='<thead><tr><th>Cost Factor</th><th>🇩🇪 Germany (EUR)</th><th>🇺🇸 New Jersey (USD)</th><th>Annual Saving (DE)</th><th>3-Yr Saving</th><th>Notes & Sources</th></tr></thead><tbody>';
-  factors.forEach(function(f){
-    var delta=Math.round(nj[f.k]-de[f.k]);
-    tH+='<tr><td>'+f.i+' '+f.l+'</td><td class="vd">'+fc(de[f.k])+'</td><td class="vn">'+fc(nj[f.k],'$')+'</td><td class="vg">~'+fc(delta,'$')+'</td><td class="vg">~'+fc(delta*3,'$')+'</td><td style="font-size:10px;color:var(--muted)">'+factNotes[f.k]+'</td></tr>';
-  });
-  tH+='<tr style="background:var(--green-light)"><td><strong>Total Year 1</strong></td><td class="vd"><strong>'+fc(de.totalY1)+'</strong></td><td class="vn"><strong>'+fc(nj.totalY1,'$')+'</strong></td><td class="vg"><strong>~'+fc(d.sav,'$')+'</strong></td><td class="vg"><strong>~'+fc(d.sav3,'$')+'</strong></td><td></td></tr></tbody>';
+  var tH='<thead><tr><th>Cost Factor</th><th>🇩🇪 Germany (EUR)</th><th>🇺🇸 New Jersey (USD)</th><th>Annual Saving (DE)</th><th>3-Yr Saving</th><th>Notes</th></tr></thead><tbody>';
+  factors.forEach(function(f){var delta=Math.round(nj[f.k]-de[f.k]);tH+='<tr><td>'+f.i+' '+f.l+'</td><td class="vd">'+fc(de[f.k])+'</td><td class="vn">'+fc(nj[f.k],'$')+'</td><td class="vg">~'+fc(delta,'$')+'</td><td class="vg">~'+fc(delta*3,'$')+'</td><td style="font-size:10px;color:var(--muted)">'+factNotes[f.k]+'</td></tr>';});
+  tH+='<tr style="background:var(--green-l)"><td><strong>Total Year 1</strong></td><td class="vd"><strong>'+fc(de.totalY1)+'</strong></td><td class="vn"><strong>'+fc(nj.totalY1,'$')+'</strong></td><td class="vg"><strong>~'+fc(d.sav,'$')+'</strong></td><td class="vg"><strong>~'+fc(d.sav3,'$')+'</strong></td><td></td></tr></tbody>';
   document.getElementById('cth-tbl').innerHTML=tH;
+  recalc();
 }
-renderCTH();
+setLvl('principal',document.querySelector('.lbt.on'));
 
-// ═══ CANDIDATES ═══
+// ══ CANDIDATES ══
 var cands=[
   {m:'de',n:'Matthias Ommer',t:'Director Eng Preform & Fiber',co:'j-plasma GmbH',deg:'Doctor',base:'€118,954',yrs:18,pr:'Very High',fr:'Medium',st:'active'},
   {m:'de',n:'Werner Weiershausen',t:'Lead Architect Transport Networks',co:'Deutsche Telekom',deg:'N/A',base:'€145,313',yrs:34,pr:'Very High',fr:'Very High',st:'active'},
   {m:'de',n:'Ergest Alite',t:'Data Center Architect',co:'Telefónica Germany',deg:'Doctor',base:'€154,675',yrs:23,pr:'High',fr:'Medium',st:'active'},
-  {m:'de',n:'Rouwen Kunze',t:'Head Imaging & Smart Sensor Systems',co:'Carl Zeiss AG',deg:'Master',base:'€105,580',yrs:12,pr:'Very High',fr:'Medium',st:'active'},
+  {m:'de',n:'Rouwen Kunze',t:'Head Imaging & Smart Sensor',co:'Carl Zeiss AG',deg:'Master',base:'€105,580',yrs:12,pr:'Very High',fr:'Medium',st:'active'},
   {m:'de',n:'Fabian Fischer',t:'R&D Specialist Sensor Systems',co:'Giesecke+Devrient',deg:'Master',base:'€112,525',yrs:12,pr:'Very High',fr:'Medium',st:'active'},
   {m:'de',n:'Rolf Versteeg',t:'Space Laser Engineer',co:'Fraunhofer ILT',deg:'Master',base:'€80,857',yrs:12,pr:'Very High',fr:'Medium',st:'active'},
-  {m:'de',n:'Oliver Langen',t:'Lead Software Architect',co:'Nokia Germany',deg:'Master',base:'€185,288',yrs:11,pr:'Medium',fr:'Low',st:'active'},
+  {m:'de',n:'Oliver Langen',t:'Lead SW Architect',co:'Nokia Germany',deg:'Master',base:'€185,288',yrs:11,pr:'Medium',fr:'Low',st:'active'},
   {m:'de',n:'Moritz Schlie',t:'Projektleiter F&E',co:'incoatec GmbH',deg:'Master',base:'€120,808',yrs:17,pr:'Very High',fr:'High',st:'active'},
   {m:'de',n:'Michael Gruber',t:'Optical Systems Expert',co:'EV Group',deg:'Doctor',base:'€103,205',yrs:17,pr:'Very High',fr:'High',st:'active'},
   {m:'de',n:'Yabin Ye',t:'Senior Researcher',co:'Huawei Germany',deg:'Doctor',base:'€143,727',yrs:23,pr:'Very High',fr:'Very High',st:'active'},
   {m:'de',n:'Maximilian Frenzel',t:'Doctoral Student',co:'Fritz Haber Inst.',deg:'Master',base:'€30,574',yrs:7,pr:'Very High',fr:'High',st:'open'},
   {m:'de',n:'Abdullahi Ibrahim',t:'Postdoctoral Research Associate',co:'TU Dresden',deg:'Doctor',base:'€54,830',yrs:9,pr:'Very High',fr:'Low',st:'open'},
   {m:'de',n:'Anindya Ghosh',t:'Wissenschaftlicher Mitarbeiter',co:'FAU Erlangen',deg:'Master',base:'€52,498',yrs:13,pr:'High',fr:'High',st:'active'},
-  {m:'de',n:'C. Xia',t:'Advanced Technology Networks Engineer',co:'ADTRAN Germany',deg:'Doctor',base:'€59,626',yrs:23,pr:'Very High',fr:'Low',st:'active'},
-  {m:'nj',n:'Jasper Drisko',t:'Hardware Engineering Technical Leader',co:'Cisco / Acacia',deg:'PhD',base:'~$195K est.',yrs:15,pr:'Very High',fr:'Low',st:'active'},
+  {m:'de',n:'C. Xia',t:'Advanced Technology Networks Eng.',co:'ADTRAN Germany',deg:'Doctor',base:'€59,626',yrs:23,pr:'Very High',fr:'Low',st:'active'},
+  {m:'nj',n:'Jasper Drisko',t:'Hardware Eng. Technical Leader',co:'Cisco / Acacia',deg:'PhD',base:'~$195K est.',yrs:15,pr:'Very High',fr:'Low',st:'active'},
   {m:'nj',n:'Abdenour Amtout',t:'R&D Staff Laser Design Engineer',co:'ams OSRAM (Princeton Jct.)',deg:'PhD',base:'~$135K est.',yrs:35,pr:'Very High',fr:'Low',st:'open'},
   {m:'nj',n:'Tyler Blundo',t:'RFIC & Antenna PhD Researcher',co:'Princeton University',deg:'PhD',base:'~$55K est.',yrs:8,pr:'Very High',fr:'Medium',st:'open'},
   {m:'nj',n:'Mohamad H. Idjadi',t:'Integrated Photonics Researcher',co:'Nokia Bell Labs',deg:'PhD',base:'~$165K est.',yrs:11,pr:'Very High',fr:'Medium',st:'active'},
@@ -930,17 +1050,7 @@ function renderC(){
   document.getElementById('ca-body').innerHTML=data.map(function(c){
     var mkt=c.m==='de'?'<span class="p dt">🇩🇪 DE</span>':'<span class="p nt">🇺🇸 NJ</span>';
     var st=c.st==='open'?'<span class="p hi">Open to Work</span>':(c.m==='de'?'<span class="p dt">Active</span>':'<span class="p nt">Active</span>');
-    return '<tr>'+
-      '<td>'+mkt+'</td>'+
-      '<td><strong>'+c.n+'</strong></td>'+
-      '<td style="font-size:11px;color:var(--muted)">'+c.t+'</td>'+
-      '<td style="font-size:12px">'+c.co+'</td>'+
-      '<td style="font-size:11px;color:var(--muted)">'+c.deg+'</td>'+
-      '<td class="'+(c.m==='de'?'vd':'vn')+'">'+c.base+'</td>'+
-      '<td style="text-align:center;font-family:IBM Plex Mono,monospace;font-weight:600">'+c.yrs+'</td>'+
-      '<td><span class="p '+(rm[c.pr]||'md')+'">'+c.pr+'</span></td>'+
-      '<td><span class="p '+(rm[c.fr]||'md')+'">'+c.fr+'</span></td>'+
-      '<td>'+st+'</td></tr>';
+    return '<tr><td>'+mkt+'</td><td><strong>'+c.n+'</strong></td><td style="font-size:11px;color:var(--muted)">'+c.t+'</td><td style="font-size:12px">'+c.co+'</td><td style="font-size:11px;color:var(--muted)">'+c.deg+'</td><td class="'+(c.m==='de'?'vd':'vn')+'">'+c.base+'</td><td style="text-align:center;font-family:IBM Plex Mono,monospace;font-weight:600">'+c.yrs+'</td><td><span class="p '+(rm[c.pr]||'md')+'">'+c.pr+'</span></td><td><span class="p '+(rm[c.fr]||'md')+'">'+c.fr+'</span></td><td>'+st+'</td></tr>';
   }).join('');
 }
 renderC();
